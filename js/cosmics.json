@@ -1,0 +1,248 @@
+{
+ "cosmicsL" : [
+	 {
+	     "name" : "cosmic left 1",
+			 "perX" : "0.83",
+			 "perY" : "0.13",
+			 "linkMobile" : "https://vimeo.com/226627921", 
+			 "linkDesktop" : "cosmics.html?cosmic=0"
+	 },
+	 {
+	   "name" : "cosmic left 2",
+		 "perX" : "0.50",
+		 "perY" : "0.21",
+		 "linkMobile" : "https://vimeo.com/226629389",
+		 "linkDesktop" : "cosmics.html?cosmic=1"
+	 },
+	 {
+	   "name" : "cosmic left 3",
+		 "perX" : "0.41",
+		 "perY" : "0.30",
+		 "linkMobile" : "https://vimeo.com/226631176",
+		 "linkDesktop" : "cosmics.html?cosmic=2"
+	 },
+	 {
+	   "name" : "cosmic left 4",
+		 "perX" : "0.55",
+		 "perY" : "0.29",
+		 "linkMobile" : "https://vimeo.com/226632661",
+		 "linkDesktop" : "cosmics.html?cosmic=3"
+	 },
+	 {
+	   "name" : "cosmic left 5",
+		 "perX" : "0.55",
+		 "perY" : "0.46",
+		 "linkMobile" : "https://vimeo.com/226634119",
+		 "linkDesktop" : "cosmics.html?cosmic=4"
+	 },
+	 {
+	   "name" : "cosmic left 6",
+		 "perX" : "0.74",
+		 "perY" : "0.46",
+		 "linkMobile" : "https://vimeo.com/226645164",
+		 "linkDesktop" : "cosmics.html?cosmic=5"
+	 },
+	 {
+	   "name" : "cosmic left 7",
+		 "perX" : "0.35",
+		 "perY" : "0.66",
+		 "linkMobile" : "https://vimeo.com/226635739",
+		 "linkDesktop" : "cosmics.html?cosmic=6"
+	 },
+	 {
+	   "name" : "cosmic left 8",
+		 "perX" : "0.85",
+		 "perY" : "0.67",
+		 "linkMobile" : "https://vimeo.com/226637359",
+		 "linkDesktop" : "cosmics.html?cosmic=7"
+	 },
+	 {
+	   "name" : "cosmic left 9",
+		 "perX" : "0.51",
+		 "perY" : "0.85",
+		 "linkMobile" : "https://vimeo.com/226639104",
+		 "linkDesktop" : "cosmics.html?cosmic=8"
+	 }
+ ],
+ "cosmicsR" : [
+    {
+	     "name" : "cosmic right 1",
+			 "perX" : "0.10",
+			 "perY" : "0.87",
+			 "linkMobile" : "https://vimeo.com/227661329",
+			 "linkDesktop" : "cosmics.html?cosmic=9"
+	 },
+	 {
+	     "name" : "cosmic right 2",
+			 "perX" : "0.39",
+			 "perY" : "0.84",
+			 "linkMobile" : "https://vimeo.com/226642650",
+			 "linkDesktop" : "cosmics.html?cosmic=10"
+	 },
+	 {
+	     "name" : "cosmic right 3",
+			 "perX" : "0.61",
+			 "perY" : "0.66",
+			 "linkMobile" : "https://vimeo.com/227663079",
+			 "linkDesktop" : "cosmics.html?cosmic=11"
+	 },
+	 {
+	     "name" : "cosmic right 4",
+			 "perX" : "0.55",
+			 "perY" : "0.57",
+			 "linkMobile" : "https://vimeo.com/227664801",
+			 "linkDesktop" : "cosmics.html?cosmic=12"
+	 },
+	 {
+	     "name" : "cosmic right 5",
+			 "perX" : "0.16",
+			 "perY" : "0.48",
+			 "linkMobile" : "https://vimeo.com/227666623",
+			 "linkDesktop" : "cosmics.html?cosmic=13"
+	 },
+	 {
+	     "name" : "cosmic right 6",
+			 "perX" : "0.38",
+			 "perY" : "0.43",
+			 "linkMobile" : "https://vimeo.com/227670135",
+			 "linkDesktop" : "cosmics.html?cosmic=14"
+	 },
+	 {
+	     "name" : "cosmic right 7",
+			 "perX" : "0.59",
+			 "perY" : "0.39",
+			 "linkMobile" : "https://vimeo.com/227666622",
+			 "linkDesktop" : "cosmics.html?cosmic=15"
+	 },
+	 {
+	     "name" : "cosmic right 8",
+			 "perX" : "0.44",
+			 "perY" : "0.24",
+			 "linkMobile" : "https://vimeo.com/227672132",
+			 "linkDesktop" : "cosmics.html?cosmic=16"
+	 },
+	 {
+	     "name" : "cosmic right 9",
+			 "perX" : "0.10",
+			 "perY" : "0.10",
+			 "linkMobile" : "https://vimeo.com/227674206",
+			 "linkDesktop" : "cosmics.html?cosmic=17"
+	 }
+  ],
+  "lineL" : [
+    {
+      "name" : "line left 1",
+      "perX1" : "0.52",
+      "perY1" : "0.21",
+      "perX2" : "0.82",
+      "perY2" : "0.15"
+    },
+    {
+      "name" : "line left 2",
+      "perX1" : "0.50",
+      "perY1" : "0.23",
+      "perX2" : "0.43",
+      "perY2" : "0.29"
+    },
+    {
+      "name" : "line left 3",
+      "perX1" : "0.43",
+      "perY1" : "0.30",
+      "perX2" : "0.53",
+      "perY2" : "0.30"
+    },
+    {
+      "name" : "line left 4",
+      "perX1" : "0.56",
+      "perY1" : "0.32",
+      "perX2" : "0.56",
+      "perY2" : "0.45"
+    },
+    {
+      "name" : "line left 5",
+      "perX1" : "0.58",
+      "perY1" : "0.47",
+      "perX2" : "0.72",
+      "perY2" : "0.47"
+    },
+    {
+      "name" : "line left 6",
+      "perX1" : "0.73",
+      "perY1" : "0.48",
+      "perX2" : "0.38",
+      "perY2" : "0.65"
+    },
+    {
+      "name" : "line left 7",
+      "perX1" : "0.38",
+      "perY1" : "0.66",
+      "perX2" : "0.84",
+      "perY2" : "0.67"
+    },
+    {
+      "name" : "line left 8",
+      "perX1" : "0.84",
+      "perY1" : "0.69",
+      "perX2" : "0.54",
+      "perY2" : "0.85"
+    }
+  ],
+  "lineR" : [
+    {
+      "name" : "line right 1",
+      "perX1" : "0.38",
+      "perY1" : "0.86",
+      "perX2" : "0.13",
+      "perY2" : "0.88"
+    },
+    {
+      "name" : "line right 2",
+      "perX1" : "0.42",
+      "perY1" : "0.83",
+      "perX2" : "0.59",
+      "perY2" : "0.69"
+    },
+    {
+      "name" : "line right 3",
+      "perX1" : "0.60",
+      "perY1" : "0.65",
+      "perX2" : "0.57",
+      "perY2" : "0.59"
+    },
+    {
+      "name" : "line right 4",
+      "perX1" : "0.54",
+      "perY1" : "0.57",
+      "perX2" : "0.20",
+      "perY2" : "0.50"
+    },
+    {
+      "name" : "line right 5",
+      "perX1" : "0.20",
+      "perY1" : "0.48",
+      "perX2" : "0.37",
+      "perY2" : "0.45"
+    },
+    {
+      "name" : "line right 6",
+      "perX1" : "0.42",
+      "perY1" : "0.43",
+      "perX2" : "0.58",
+      "perY2" : "0.41"
+    },
+    {
+      "name" : "line right 7",
+      "perX1" : "0.57",
+      "perY1" : "0.38",
+      "perX2" : "0.47",
+      "perY2" : "0.26"
+    },
+    {
+      "name" : "line right 8",
+      "perX1" : "0.43",
+      "perY1" : "0.24",
+      "perX2" : "0.12",
+      "perY2" : "0.12"
+    }
+  ]
+}

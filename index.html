@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+Raw Warrior
+v 2.0
+27 de Junio
+[FLUO]
+info@fluo.com.mx
+fluo.com.mx
+-->
+  <head>
+    <meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="google" content="notranslate"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+		<title>Raw Warrior</title>
+		<link rel="canonical" href="http://iamrawwarrior.com"/>
+		<meta property="og:title" content="Raw Warrior"/>
+		<meta property="og:url" content="http://iamrawwarrior.com"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:image" content="img/media.jpg"/>
+		<meta property="og:description" content=""/>  <!-- FALTA* -->
+		<meta property="og:site_name" content="Raw Warrior"/>
+		<meta name="description" content=""/>  <!-- FALTA* -->
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:title" content="Raw Warrior"/>
+		<meta name="twitter:description" content=" "/>  <!-- FALTA* -->
+		<meta name="twitter:image" content="img/media.jpg"/>
+		<meta name="keywords" content=" "/> <!-- FALTA* -->
+		<link rel="icon" href="img/favicon/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png"/>
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png"/>
+		<link rel="icon" type="image/png" href="img/favicon/favicon-196x196.png" sizes="196x196"/>
+		<link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96"/>
+		<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32"/>
+		<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16"/>
+		<link rel="icon" type="image/png" href="img/favicon/favicon-128.png" sizes="128x128"/>
+		<meta name="application-name" content="&nbsp;"/>
+		<meta name="msapplication-TileColor" content="#FFFFFF"/>
+		<meta name="msapplication-TileImage" content="mstile-144x144.png"/>
+		<meta name="msapplication-square70x70logo" content="mstile-70x70.png"/>
+		<meta name="msapplication-square150x150logo" content="mstile-150x150.png"/>
+		<meta name="msapplication-wide310x150logo" content="mstile-310x150.png"/>
+		<meta name="msapplication-square310x310logo" content="mstile-310x310.png"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/master.css"/>
+  </head>
+  <body>
+    <p id="size"></p>
+    <div id="loading">
+      <p id="percentage">1%</p>
+      <img src="img/logos/logo-rawwarrior-small.svg" title="Logo Raw Warrior" alt="Logo Raw Warrior for loading" width="110" height="110">
+    </div>
+    <div id="main">
+      <div id="interface">
+        <div id="pixiContainer">
+          <img id="introLogotipo" class="animationIntro" src="img/logos/logo-rawwarrior-big.svg" alt="Logo Raw Warrior">
+        </div>
+        <div id="intro">
+          <h1>Raw Warrior</h1>
+          <h2 id="tituloIntro" class="animationIntro">About this platform</h2>
+          <p id="textIntro" class="animationIntro">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+            magna aliquam erat volutpat.
+          </p>
+          <div>
+            <a class="triggerBtn" href="home.html" role="button" onmouseover="hoverButton(1)" onmouseout="hoverButton(2)">
+              <svg class="svgView" viewBox="0 0 204 83">
+	              <path class="frameBorder" fill="none" stroke="#F9F1DD" stroke-width="2" stroke-miterlimit="10"  d="M2,3.1h200.9V76H2V3.1z"/>
+              </svg>
+              <span id="introBtnA" class="animationIntro">
+                <img id="imgBtnA" src="img/icons/english.svg" alt="Button for englsih section">
+              </span>
+            </a>
+            <a class="triggerBtn" href="home.html" role="button" onmouseover="hoverButton(3)" onmouseout="hoverButton(4)">
+              <svg class="svgView" viewBox="0 0 204 83">
+                <path class="frameBorder" fill="none" stroke="#F9F1DD" stroke-width="2" stroke-miterlimit="10"  d="M2,3.1h200.9V76H2V3.1z"/>
+              </svg>
+              <span id="introBtnB" class="animationIntro">
+                <img id="imgBtnB" src="img/icons/espanol.svg" alt="Button for spanish section">
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="js/bowser.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var headDom =  document.getElementsByTagName("HEAD")[0];
+      var checkMobileIndex = false;
+      var ss = [];
+      for(var i = 0; i<3; i++){
+        var s = document.createElement("SCRIPT");
+        s.async = true;
+        ss.push(s);
+      }
+      ss[0].setAttribute('src', 'js/build/shaders.js');
+      ss[1].setAttribute('src', 'js/main.js');
+      ss[2].setAttribute('src', 'js/index.js');
+
+      window.console.log("%cCoded by Mn - http://fluo.com.mx", "color:pink;  font-size: 10px; background:#000; padding:2px;");
+      function _(el){return document.getElementById(el); }
+      function __(el){return document.getElementsByClassName(el); }
+      if(bowser.mobile || bowser.tablet || /SymbianOS/.test(window.navigator.userAgent)) checkMobileIndex = true;
+      function loadThree(){
+        for(var i = 0; i<3; i++){
+          document.body.appendChild(ss[i]);
+        }
+      }
+    </script>
+    <script src="js/build/three.min.js" charset="utf-8" onload="loadThree()" async></script>
+    <script src="js/build/Detector.js" charset="utf-8" async></script>
+    <script src="js/build/pixi.min.js" charset="utf-8" async></script>
+  </body>
+</html>

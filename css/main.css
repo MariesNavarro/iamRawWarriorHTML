@@ -1,0 +1,199 @@
+/*
+Theme: Raw Warrior;
+Version : Versión Junio
+*/
+
+#size{
+  position: fixed;
+ 	left: 20px;
+ 	top: 20px;
+ 	color: #000;
+ 	z-index: 5000;
+  display: none;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
+sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } article, aside, details, figcaption, figure, footer, header, hgroup, menu,
+nav, section {display: block; } body {line-height: 1; } ol, ul {list-style: none; } blockquote, q {quotes: none; } blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none; }
+table {border-collapse: collapse; border-spacing: 0; }
+@font-face {
+  font-family: 'Garamond B';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/Garamond_b.woff') format('woff'),
+       url('../assets/fonts/Garamond_b.ttf')  format('truetype'),
+       url('../assets/fonts/Garamond_b.eot')  format('embedded-opentype')
+}
+@font-face {
+  font-family: 'Garamond D';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../assets/fonts/Garamond_d.woff') format('woff'),
+       url('../assets/fonts/Garamond_d.ttf')  format('truetype'),
+       url('../assets/fonts/Garamond_d.eot')  format('embedded-opentype')
+}
+/*@font-face {
+  font-family: 'Garamond DI';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../assets/fonts/Garamond_di.woff') format('woff'),
+       url('../assets/fonts/Garamond_di.ttf')  format('truetype'),
+       url('../assets/fonts/Garamond_di.eot')  format('embedded-opentype')
+}
+@font-face {
+  font-family: 'Garamond NI';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../assets/fonts/Garamond_ni.woff') format('woff'),
+       url('../assets/fonts/Garamond_ni.ttf')  format('truetype'),
+       url('../assets/fonts/Garamond_ni.eot')  format('embedded-opentype')
+}*/
+@font-face {
+  font-family: 'Garamond LI';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../assets/fonts/Garamond_li.woff') format('woff'),
+       url('../assets/fonts/Garamond_li.ttf')  format('truetype'),
+       url('../assets/fonts/Garamond_li.eot')  format('embedded-opentype')
+}
+* { margin:0; padding:0; }
+* a{ text-decoration: none; color: #f6eed9; }
+html{ width: 100vw; height: 100vh; height: 100vh;
+overflow: hidden; }
+body{
+  overflow: block;
+  font-family: 'Garamond D', 'Garamond', 'Baskerville', 'Times New Roman',serif;
+  font-size: 16px;
+  color: #f6eed9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(14,38,53,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e2635', endColorstr='#000000', GradientType=1 );
+}
+h1, h2, h3, h4{
+  font-family: 'Garamond B', 'Garamond', 'Baskerville', 'Times New Roman',serif;
+}
+#main{
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(14,38,53,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e2635', endColorstr='#000000', GradientType=1 );
+}
+#loading{
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 6000;
+  background: rgba(14,38,53,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 20%, rgba(0,0,0,1) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 20%, rgba(0,0,0,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 20%, rgba(0,0,0,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 20%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 20%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e2635', endColorstr='#000000', GradientType=1 );
+
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+#loading > img{
+  position: absolute;
+  top: calc(40% - 55px);
+  left: calc(50% - 55px);
+  -webkit-animation: spin 35s linear infinite;
+  -moz-animation: spin 35s linear infinite;
+  -ms-animation: spin 35s linear infinite;
+  -o-animation: spin 35s linear infinite;
+  animation: spin 35s linear infinite;
+}
+#loading > p{
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: calc(40% - 25px);
+  left: calc(50% - 25px);
+  line-height: 50px;
+  text-align: center;
+}
+#percentage{
+  font-size: 16px;
+  color: #f6eed9;
+}
+
+#suscribe{
+  position: fixed;
+  top: calc(50% - 150px);
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 300px;
+  z-index: 9900;
+  background: #f6eed9;
+
+  opacity: 0;
+  display: none;
+
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+#suscribe>a{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+#suscribe>form{
+  color: #0e2635;
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  top: calc(50% - 75px);
+  left: calc(50% - 200px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content:space-between;
+  align-items: center;
+}
+#suscribeBtn, #fieldName, #fieldEmail{
+  font-family: 'Garamond', sans-serif;
+  padding: 5px 8px;
+  font-size: 14px;
+  color: #0e2635;
+  background: none;
+  border: 1px solid #0e2635;
+  cursor: pointer;
+}
+#suscribeBtn:hover{
+  background: #0e2635;
+  color: #f6eed9;
+}

@@ -1,0 +1,430 @@
+/*
+Raw Warrior
+v 2.0
+27 de Junio
+ */
+#main>canvas{
+  overflow: hidden;
+  width: 100%;
+  height: 100vh !important;
+  position: absolute;
+  top: 0;
+  background: rgba(255,255,255,0);
+}
+#interface{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255,0);
+  z-index: 2000;
+}
+#pixiContainer{
+  position: relative;
+  margin: 4% auto 0 auto;
+  width: 370px;
+  height: 370px;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+#pixiContainer>canvas{
+  width: 100%;
+}
+#pixiContainer>img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-animation: spin 55s linear infinite;
+  -moz-animation: spin 55s linear infinite;
+  -ms-animation: spin 55s linear infinite;
+  -o-animation: spin 55s linear infinite;
+  animation: spin 55s linear infinite;
+}
+#intro{
+  position: relative;
+  width: 100vw;
+  height: 400px;
+}
+#intro>h1{
+  position: absolute;
+  opacity: 0;
+}
+#intro>h2{
+  font-size: 1.7rem;
+  text-align: center;
+  letter-spacing: 8px;
+  position: relative;
+  margin-top: 30px;
+}
+#intro>p{
+  display: block;
+  width: 400px;
+  text-align: center;
+  margin: 3% auto;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+#intro>div{
+  position: relative;
+  margin: 2% auto 0 auto;
+  width: 400px;
+  height: auto;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content:space-around;
+  -webkit-justify-content:space-around;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#intro>div>a{
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  display: block;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+#intro>div>a>svg{
+  position: absolute;
+  left: 0;
+}
+.transitionClass{
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.animationIntro{
+  opacity: 0;
+}
+/* HOME */
+#closeMenuMobile{
+  display: none;
+}
+nav{
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  z-index: 4000;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+nav> #outer{
+  position: absolute;
+  top: 0;
+  left: 5vw;
+  width: 90vw;
+  height: 100px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#logoSpinSmall{
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 25s linear infinite;
+  -moz-animation: spin 25s linear infinite;
+  -ms-animation: spin 25s linear infinite;
+  -o-animation: spin 25s linear infinite;
+  animation: spin 25s linear infinite;
+}
+#outer>a{
+  cursor: pointer;
+}
+#outer>a>p{
+  font-family: 'Garamond LI', 'Garamond', 'Baskerville', 'Times New Roman',serif;
+  letter-spacing: 4px;
+  font-size: 1.08rem;
+  padding: 5px;
+}
+#outer>a>p>span{
+  display: block;
+  background: #f6eed9;
+  width: 100%;
+  height: 1px;
+  margin-top: 2px;
+}
+nav> #inner{
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  right: -200px;
+  top: 20px;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: right 0.5s ease-in-out, opacity 0.3s ease-out;
+  -moz-transition: right 0.5s ease-in-out, opacity 0.3s ease-out;
+  -ms-transition: right 0.5s ease-in-out, opacity 0.3s ease-out;
+  -o-transition: right 0.5s ease-in-out, opacity 0.3s ease-out;
+  transition: right 0.5s ease-in-out, opacity 0.3s ease-out;
+}
+nav> #inner>ul{
+  position: absolute;
+  right: 30px;
+  width: 200px;
+  height: 90%;
+  top: 5%;
+  text-align: right;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content:space-around;
+  -webkit-justify-content:space-around;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  align-items: space-between;
+  -webkit-align-items: space-between;
+}
+nav> #inner>ul>li>a, #subInner>ul>li>a{
+  font-family: 'Garamond LI', 'Garamond', 'Baskerville', 'Times New Roman',serif;
+  letter-spacing: 4px;
+  font-size: 1.08rem;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+}
+nav> #inner>ul>li>a:hover>span, nav> #subInner>ul>li>a:hover>span{
+  opacity: 1;
+  width: 100%;
+}
+nav> #inner>ul>li>a>span, nav> #subInner>ul>li>a>span{
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #f6eed9;
+  margin-top: 5px;
+  opacity: 0;
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+#subInner{
+  display: block;
+  position: absolute;
+  right: -225px;
+  width: 200px;
+  height: 250px;
+  background: rgba(255,255,255,0);
+
+  transition: right 0.5s ease-out;
+}
+#subInner>ul{
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  height: 90%;
+  text-align: right;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content:space-around;
+  -webkit-justify-content:space-around;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  align-items: space-between;
+  -webkit-align-items: space-between;
+}
+#subInner>ul>li>a>img{
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+footer{
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  width: 120vw;
+  height: 80px;
+  opacity: 0;
+  z-index: 5000;
+
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+footer>#outer{
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+}
+footer>#outer>a{
+  display: block;
+  width: 94.5vw;
+  height: 100%;
+  line-height: 80px;
+  text-align: right;
+  font-family: 'Garamond D', sans-serif;
+  color: #f6eed9;
+  font-size: 0.95rem;
+  font-variant: small-caps;
+}
+footer>#outer>span{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5.5vw;
+  height: 100%;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content:center;
+  -webkit-justify-content:center;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.rotateBack{
+  opacity: 1 !important;
+  -webkit-transform: rotate(0deg) !important;
+  -moz-transform: rotate(0deg) !important;
+  -ms-transform: rotate(0deg) !important;
+  -o-transform: rotate(0deg) !important;
+  transform: rotate(0deg) !important;
+}
+footer>#outer>span>img{
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+footer>#inner{
+  position: absolute;
+  display: block;
+  right: 5vw;
+  width: 10vw;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+.mediaBtn{
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+.mediaBtn:hover{
+  opacity: 0.5;
+}
+/* WIDTH */
+@media screen and (max-width:430px){
+  #intro>h2{
+    font-size: 1.5rem;
+  }
+  #intro>p{
+    font-size: 1rem;
+    width: 300px;
+    margin: 5% auto;
+  }
+  #intro>div{
+    margin: 7% auto 0 auto;
+    width: 340px;
+  }
+  #pixiContainer{
+    width: 300px;
+    height: 300px;
+  }
+  /* Home */
+  #logoSpinSmall{
+    opacity: 0;
+  }
+}
+/* HEIGHT */
+@media screen and (max-height:790px){
+  #intro>h2{
+    font-size: 1.5rem;
+  }
+  #intro>p{
+    font-size: 1.1rem;
+    width: 300px;
+    margin: 2% auto;
+  }
+  #pixiContainer{
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-height:660px){
+  #pixiContainer{
+    width: 200px;
+    height: 200px;
+    margin: 6% auto 0 auto;
+  }
+  #intro > div > a {
+    width: 120px;
+  }
+}
+@-webkit-keyframes spin {
+  100%{ -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+  100%{ -moz-transform: rotate(360deg); }
+}
+@-o-keyframes spin {
+  100%{ -o-transform: rotate(360deg); }
+}
+@-ms-keyframes spin {
+  100%{ -ms-transform: rotate(360deg); }
+}
+@keyframes spin {
+  100%{ transform: rotate(360deg); }
+}
