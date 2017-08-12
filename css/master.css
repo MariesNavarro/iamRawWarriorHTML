@@ -272,7 +272,7 @@ nav> #inner>ul>li>a>span, nav> #subInner>ul>li>a>span{
 }
 footer{
   position: fixed;
-  bottom: 30px;
+  bottom: 8px;
   left: 0;
   width: 120vw;
   height: 80px;
@@ -292,8 +292,10 @@ footer>#outer{
   left: 0;
 }
 footer>#outer>a{
+  position: absolute;
+  right: 100px;
   display: block;
-  width: 94.5vw;
+  width: 100px;
   height: 100%;
   line-height: 80px;
   text-align: right;

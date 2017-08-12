@@ -341,7 +341,7 @@ span.izq{
 #instruction{
   position: absolute;
   left: calc(50% - 50px);
-  bottom: 30px;
+  bottom: 8px;
   height: 60px;
   width: 100px;
   opacity: 0;
@@ -430,7 +430,7 @@ span.izq{
 }
 #switchElementsW{
   position: fixed;
-  bottom: 30px;
+  bottom: 8px;
   left: 0;
   width: 50vw;
   height: 60px;

@@ -125,7 +125,7 @@ p {
   position: relative;
   width: 420px;
   height: 420px;
-  left: calc(50% -  200px);
+  left: calc(50% -  240px);
   top: 20px;
   overflow: hidden;
   /*border: 1px solid red;*/

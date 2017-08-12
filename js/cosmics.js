@@ -11,6 +11,8 @@ videoUrl,
 allUrl,
 suscribe = _('suscribe'),
 titCos = _('titCos'),
+menuBo = _('menuBo'),
+changeNumCos = _('changeNumCos'),
 imgBtnInfo = _('imgBtnInfo'),
 infoBtnW = _('infoBtnW'),
 main = _('main'),
@@ -21,6 +23,7 @@ inner = _('inner'),
 subInner = _('subInner'),
 backToInner = _('backToInner'),
 textCosmic = _('textCosmic'),
+bulletCosmic = __('bulletCosmic'),
 menuBtn = _('menuBtn');
 navDom.style.opacity = "1";
 footerDom.style.opacity = "1";
@@ -73,8 +76,14 @@ document.onkeydown = function(evt) {
   }
 };
 
-
 function sliderCosmic(b, i){
+  var num = [];
+  if(i == 0){
+    num = 1;
+  } else {
+    num = (i + 1);
+  }
+  changeNumCos.innerHTML = num;
   if(b === true){
       countSuscribe++;
       if(countSuscribe === 3){
@@ -94,6 +103,24 @@ function sliderCosmic(b, i){
     loadVimeo(allUrl);
   }
 }
+
+function arrSliderCos(c){
+  if(urlValue > 0) countSlider = urlValue;
+  switch (c) {
+    case 0:
+    countSlider--;
+    if (countSlider < 0) countSlider = 17;
+    sliderCosmic(urlindex, countSlider);
+    break;
+    case 1:
+      countSlider++;
+      if (countSlider > 17) countSlider = 0;
+      sliderCosmic(urlindex, countSlider);
+    break;
+  }
+}
+
+
 
 function loadVimeo(url) {
   prevDup();
@@ -142,21 +169,8 @@ function diveDeepFun(c){
   }
 }
 
-function arrSliderCos(c){
-  if(urlValue > 0) countSlider = urlValue;
-  switch (c) {
-    case 0:
-    countSlider--;
-    if (countSlider < 0) countSlider = 17;
-    sliderCosmic(urlindex, countSlider);
-    break;
-    case 1:
-      countSlider++;
-      if (countSlider > 17) countSlider = 0;
-      sliderCosmic(urlindex, countSlider);
-    break;
-  }
-}
+
+
 function overBtn(c){
   switch (c) {
   case "overEx":
@@ -238,11 +252,7 @@ function setInnerMenu(){
   inner.setAttribute('onmouseover', 'overDesktop(1)');
   inner.setAttribute('onmouseout', 'overDesktop(2)');
 }
-function setFooterHover(){
-  overFooterBtn.setAttribute('onmouseover', 'footerHover(1)');
-  overFooterBtn.setAttribute('onmouseout', 'footerHover(2)');
-  footerDom.setAttribute('onclick', 'footerClick()');
-}
+
 function overDesktop(s){
   switch (s) {
   case 1:
@@ -257,6 +267,13 @@ function overDesktop(s){
   break;
   }
 }
+
+function setFooterHover(){
+  overFooterBtn.setAttribute('onmouseover', 'footerHover(1)');
+  overFooterBtn.setAttribute('onmouseout', 'footerHover(2)');
+  overFooterBtn.setAttribute('onclick', 'footerClick()');
+}
+
 function footerHover(s){
   switch (s) {
     case 1:

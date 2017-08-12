@@ -660,7 +660,7 @@ function overInstruction(c, e) {
 function setFooterHover(){
   overFooterBtn.setAttribute('onmouseover', 'footerHover(1)');
   overFooterBtn.setAttribute('onmouseout', 'footerHover(2)');
-  footerDom.setAttribute('onclick', 'footerClick()')
+  overFooterBtn.setAttribute('onclick', 'footerClick()')
 }
 
 function setFooterHoverMobile(){

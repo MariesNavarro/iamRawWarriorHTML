@@ -302,6 +302,29 @@ fluo.com.mx
         }
       }
 
+      function diveDeepFun(c){
+        switch (c) {
+        case 1:
+          subInner.style.display = "block";
+          setTimeout(function(){subInner.style.opacity = "1"; },500);
+        break;
+        case 2:
+          subInner.style.opacity = "0";
+          setTimeout(function(){ subInner.style.display = "none";},400);
+        break;
+        case 3:
+          subInner.style.right = "25px";
+          menuBtn.style.display = "none";
+          inner.style.display = "none";
+        break;
+        case 4:
+          subInner.style.right = "-225px";
+          inner.style.display = "block";
+          menuBtn.style.display = "block";
+        break;
+        }
+      }
+
       /* Menu opacity */
       setTimeout(function(){
         navDom.style.opacity = "1";
