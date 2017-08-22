@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden;
+}
 /* Home Elements */
 #theElementsContainer{
   position: absolute;
@@ -25,6 +28,9 @@
   -ms-transition: opacity 0.5s ease-out;
   -o-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
+}
+#theElementsContainer>span>a{
+  display: block;
 }
 #theElementsContainer>span>a>img{
   background: rgba(255,255,255,0);
@@ -289,7 +295,6 @@ span.izq{
   cursor: pointer;
   fill: #fffcc1;
   transform: rotate(45deg);
-
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -345,7 +350,7 @@ span.izq{
   height: 60px;
   width: 100px;
   opacity: 0;
-
+  z-index: 8000;
   -webkit-transition: opacity 0.5s ease-out;
   -moz-transition: opacity 0.5s ease-out;
   -ms-transition: opacity 0.5s ease-out;
@@ -412,6 +417,9 @@ span.izq{
   right: 5vw;
   line-height: 90px;
   cursor: pointer;
+}
+#instructionWrap>a:hover{
+  opacity: 0.5;
 }
 #instructionWrap>div{
   color: #0e2635;
@@ -507,4 +515,62 @@ span.izq{
   -webkit-box-shadow: 0px 0px 20px 7px rgba(244,237,216,0.3);
   -moz-box-shadow: 0px 0px 20px 7px rgba(244,237,216,0.3);
   box-shadow: 0px 0px 20px 7px rgba(244,237,216,0.3);
+}
+/* Fix footer */
+@media screen and (max-width:830px) {
+  #instruction{
+    display: none;
+  }
+  footer > #outer > a{
+    right: 60px !important;
+  }
+  footer > #outer > span {
+    right: 10px;
+    height: 80%;
+    top: -3px;
+  }
+  #inner>p{
+    width: 100px;
+  }
+}
+@media screen and (max-width:680px) {
+  #overFooterBtn{
+    display: none !important;
+  }
+  #instructionWrap > div{
+    width: 300px;
+  }
+}
+
+#blockHeight{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fcf8e3;
+  z-index: 9000;
+}
+.blockHeightShow{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.blockHeightHide{
+  display: none;
+}
+#blockHeight>div{
+  text-align: center;
+  width: 300px;
+}
+#blockHeight>div>p{
+  color: #0e2635;
+  margin-bottom: 20px;
 }

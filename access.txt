@@ -23,6 +23,8 @@ db: iamrawwarriorDB
 dbu: iamrawwarriorDBU
 pass: xy7nB@52
 
+http://iamrawwarrior.teachable.com/
+
 http://iamrawwarrior.teachable.com/p/responsibility 
 http://iamrawwarrior.teachable.com/p/awareness 
 http://iamrawwarrior.teachable.com/p/willingness 

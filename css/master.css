@@ -297,7 +297,7 @@ footer>#outer>a{
   display: block;
   width: 100px;
   height: 100%;
-  line-height: 80px;
+  line-height: 70px;
   text-align: right;
   font-family: 'Garamond D', sans-serif;
   color: #f6eed9;
@@ -353,8 +353,8 @@ footer>#inner{
   display: block;
   right: 5vw;
   width: 10vw;
-  height: 80px;
-  line-height: 80px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
 }
 .mediaBtn{

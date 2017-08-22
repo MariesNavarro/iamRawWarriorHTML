@@ -298,9 +298,16 @@ function stopShuffleLoop(){
 }
 
 
-
+var blockHeight = _('blockHeight');
 
 function onWindowResize(event){
+  if (window.innerHeight < 480) {
+    blockHeight.classList.remove('blockHeightHide');
+    blockHeight.classList.add('blockHeightShow');
+  } else {
+    blockHeight.classList.remove('blockHeightShow');
+    blockHeight.classList.add('blockHeightHide');
+  }
   parseCosmicPos();
   setSvgView();
   setLinesPos();
@@ -317,7 +324,6 @@ function onWindowResize(event){
 
 
 if(checkMobileIndex){
-  console.log("Mobile Home");
   percentageCount();
   headDom.appendChild(linkDomMaster);
   headDom.appendChild(linkDomDesktop);
@@ -326,9 +332,9 @@ if(checkMobileIndex){
   backToInner.setAttribute('onclick', 'diveDeepFun(2)');
   setInnerMenuMobile();
   setFooterHoverMobile();
+  navDom.style.top = "0";
   setTimeout(function(){ animateElementsMobile(); }, 5000);
 } else {
-  console.log("Desktop Home");
   percentageCount();
   headDom.appendChild(linkDomMaster);
   headDom.appendChild(linkDomDesktop);
@@ -540,7 +546,12 @@ function animateHome(){
   setTimeout(function(){ elementDom[newArr[5]].style.opacity = "1"; },3000);
   setTimeout(function(){
     elementDom[newArr[6]].style.opacity = "1";
-    cosmicsWrap.style.opacity = "1";
+    if(checkMobileIndex){
+      cosmicsWrap.style.opacity = "0";
+    } else {
+      cosmicsWrap.style.opacity = "1";
+    }
+
   },3500);
 }
 
@@ -591,6 +602,8 @@ function overDesktop(s){
   }
 }
 
+var rotationOnceAndroid = false;
+
 function onWindowOrientation(event){
   var size = document.getElementById('size').innerHTML = "Width: " + innerWidth + " Height: " + innerHeight;
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -601,14 +614,32 @@ function onWindowOrientation(event){
   effectFocus.uniforms[ "screenWidth" ].value = window.innerWidth + borderFocus;
   effectFocus.uniforms[ "screenHeight" ].value = window.innerHeight +  borderFocus;
   if(window.orientation == 90 || window.orientation == -90){
-    gradientTexture.image.width = window.innerWidth;
-    gradientTexture.needsUpdate = true;
-    gradientGeometry.groupsNeedUpdate = true;
-    rot = particlesBack.rotation.y = 0.0001;
+    blockLandscapeAndroid.classList.remove('hideBlockLand');
+    blockLandscapeAndroid.classList.add('showBlockLand');
+    if (!bowser.android) {
+      gradientTexture.image.width = window.innerWidth;
+      gradientTexture.needsUpdate = true;
+      gradientGeometry.groupsNeedUpdate = true;
+      rot = particlesBack.rotation.y = 0.0001;
+    }
+    if (bowser.android) {
+      rotationOnceAndroid = true;
+    }
   } else {
-    gradientTexture.image.width = window.innerWidth;
-    gradientTexture.needsUpdate = true;
-    gradientGeometry.groupsNeedUpdate = true;
+    /* Block Rotation not Android */
+    if (!bowser.android) {
+      blockLandscapeAndroid.classList.add('hideBlockLand');
+      blockLandscapeAndroid.classList.remove('showBlockLand');
+      gradientTexture.image.width = window.innerWidth;
+      gradientTexture.needsUpdate = true;
+      gradientGeometry.groupsNeedUpdate = true;
+    }
+    /* Android Reload */
+    if (bowser.android) {
+      if(rotationOnceAndroid){
+        location.reload();
+      }
+    }
   }
 }
 

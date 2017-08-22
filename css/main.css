@@ -111,7 +111,7 @@ h1, h2, h3, h4{
   background: -ms-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 20%, rgba(0,0,0,1) 100%);
   background: radial-gradient(ellipse at center, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 20%, rgba(0,0,0,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e2635', endColorstr='#000000', GradientType=1 );
-
+  
   -webkit-transition: opacity 0.5s ease-out;
   -moz-transition: opacity 0.5s ease-out;
   -ms-transition: opacity 0.5s ease-out;
