@@ -331,3 +331,10 @@
 .disqus>img{
   width: 100%;
 }
+
+
+#disqus_thread{
+  margin-top: 120px;
+  width: 90%;
+  margin-left: 5%;
+}
