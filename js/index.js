@@ -1,9 +1,14 @@
+var rulesAndroid  = document.createElement('LINK');
+rulesAndroid.rel  = 'stylesheet';
+rulesAndroid.type = 'text/css';
+rulesAndroid.href = "css/androidRules.css";
 var linkDomMaster  = document.createElement('LINK');
 linkDomMaster.rel  = 'stylesheet';
 linkDomMaster.type = 'text/css';
 linkDomMaster.href = "css/master.css";
 var pixiContainer = _('pixiContainer'),
     svgView = __('svgView'),
+    blockLandscapeAndroid = _('blockLandscapeAndroid'),
     frameBorder = __('frameBorder'),
     triggerBtn = __('triggerBtn'),
     diveDeep = _('diveDeep');
@@ -22,13 +27,14 @@ for(var i =0; i< frameBorder.length; i++){
 
 
 if(checkMobileIndex){
-  console.log("Mobile sólo index");
   headDom.appendChild(linkDomMaster);
   setMobileButtons();
   eyeDesktop();
+  if (bowser.android){
+      headDom.appendChild(rulesAndroid);
+  }
   if(window.orientation == 90 || window.orientation == -90){ indexLandscape(); }
 } else {
-  console.log("Desktop sólo index");
   headDom.appendChild(linkDomMaster);
    eyeDesktop();
 }
@@ -173,33 +179,42 @@ function indexLandscape(){
 
 function onWindowOrientation(event){
   if(window.orientation == 90 || window.orientation == -90){
-    pixiContainer.style.width = "150px";
-    pixiContainer.style.height = "150px";
-    pixiContainer.style.margin = "0 auto 0 auto;"
-    pixiContainer.style.marginTop = "1%";
-    textIntro.style.fontSize = "1rem";
-    gradientTexture.image.width = window.innerWidth;
-    gradientTexture.needsUpdate = true;
-    gradientGeometry.groupsNeedUpdate = true;
-    rot = particlesBack.rotation.y = 0.0001;
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    camera.lookAt( scene.position );
-
+    if (bowser.android) {
+        blockLandscapeAndroid.classList.remove('hideBlockLand');
+        blockLandscapeAndroid.classList.add('showBlockLand');
+    } else {
+      pixiContainer.style.width = "150px";
+      pixiContainer.style.height = "150px";
+      pixiContainer.style.margin = "0 auto 0 auto;"
+      pixiContainer.style.marginTop = "1%";
+      textIntro.style.fontSize = "1rem";
+      gradientTexture.image.width = window.innerWidth;
+      gradientTexture.needsUpdate = true;
+      gradientGeometry.groupsNeedUpdate = true;
+      rot = particlesBack.rotation.y = 0.0001;
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      camera.lookAt( scene.position );
+    }
   } else {
-    pixiContainer.style.margin = "13% auto 0 auto;"
-    pixiContainer.style.marginTop = "13%";
-    pixiContainer.style.width = "250px";
-    pixiContainer.style.height = "250px";
-    textIntro.style.fontSize = "1.1rem";
-    gradientTexture.image.width = window.innerWidth;
-    gradientTexture.needsUpdate = true;
-    gradientGeometry.groupsNeedUpdate = true;
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.aspect = window.innerWidth / (window.innerHeight/1.01);
-    camera.updateProjectionMatrix();
-    camera.lookAt( scene.position );
+    if (bowser.android) {
+      blockLandscapeAndroid.classList.remove('showBlockLand');
+      blockLandscapeAndroid.classList.add('hideBlockLand');
+    } else {
+      pixiContainer.style.margin = "13% auto 0 auto;"
+      pixiContainer.style.marginTop = "13%";
+      pixiContainer.style.width = "250px";
+      pixiContainer.style.height = "250px";
+      textIntro.style.fontSize = "1.1rem";
+      gradientTexture.image.width = window.innerWidth;
+      gradientTexture.needsUpdate = true;
+      gradientGeometry.groupsNeedUpdate = true;
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / (window.innerHeight/1.01);
+      camera.updateProjectionMatrix();
+      camera.lookAt( scene.position );
+    }
   }
 }
 

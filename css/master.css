@@ -378,7 +378,9 @@ footer>#inner{
     margin: 5% auto;
   }
   #intro>div{
-    margin: 7% auto 0 auto;
+    position: absolute;
+    top: 160px;
+    left: calc(50% - 170px);
     width: 340px;
   }
   #pixiContainer{
@@ -398,7 +400,9 @@ footer>#inner{
   #intro>p{
     font-size: 1.1rem;
     width: 300px;
-    margin: 2% auto;
+    position: absolute;
+    top: -50px;
+    left:calc(50% - 150px);
   }
   #pixiContainer{
     width: 300px;
@@ -430,7 +434,38 @@ footer>#inner{
 @keyframes spin {
   100%{ transform: rotate(360deg); }
 }
-
+/* Fix Landscape Android */
+#blockLandscapeAndroid{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #fcf8e3;
+  z-index: 90000;
+}
+.hideBlockLand{
+  display: none;
+}
+.showBlockLand{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#blockLandscapeAndroid>div{
+  width: 70%;
+  text-align: center;
+}
+#blockLandscapeAndroid>div>p{
+  color: #0e2635;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
 /*  Redes Temporales  */
 #textIntro{
   margin-top: 100px !important;
