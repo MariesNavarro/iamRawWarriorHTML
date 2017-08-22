@@ -430,3 +430,18 @@ footer>#inner{
 @keyframes spin {
   100%{ transform: rotate(360deg); }
 }
+
+/*  Redes Temporales  */
+#textIntro{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  justify-content: space-around;
+}
+#textIntro>span{
+  display: inline-block;
+  width: 30%;
+}
