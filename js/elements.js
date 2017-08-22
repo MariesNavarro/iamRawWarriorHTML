@@ -366,7 +366,6 @@ function sequencesDesktop(size){
         loading.style.opacity = 0;
         setTimeout(function(){ loading.style.display = "none" },1000);
       }
-      console.log('Progress:', Math.round(loader.progress) + '%');
   })
 }
 

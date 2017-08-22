@@ -29,8 +29,6 @@ body{
 .bodyBackNoDeg{
   background: #f6eed9;
 }
-
-
 h2 {
     font-size: 1.4rem;
     width: 60%;
@@ -295,7 +293,7 @@ display: none;
   background: #0e2635;
   color: #f6eed9;
 }
-#moreVideoW>a:first-child{
+#moreVideoW>a{
   margin-right: 10px;
 }
 #sharePost{
