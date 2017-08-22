@@ -97,7 +97,6 @@ h1, h2, h3, h4{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e2635', endColorstr='#000000', GradientType=1 );
 }
 #loading{
-  display: none;
   overflow: hidden;
   position: absolute;
   top: 0;
