@@ -24,6 +24,9 @@ subInner = _('subInner'),
 backToInner = _('backToInner'),
 textCosmic = _('textCosmic'),
 bulletCosmic = __('bulletCosmic'),
+btnExercises = _('btnExercises'),
+btnDisqus = _('btnDisqus'),
+disqus = __('disqus'),
 menuBtn = _('menuBtn');
 navDom.style.opacity = "1";
 footerDom.style.opacity = "1";
@@ -77,7 +80,6 @@ document.onkeydown = function(evt) {
 };
 
 function sliderCosmic(b, i){
-
   var num = [];
   if(i == 0){
     num = 1;
@@ -93,12 +95,16 @@ function sliderCosmic(b, i){
       }
     titCos.innerHTML = infoCos.e[i].tit;
     textCosmic.innerHTML = infoCos.e[i].info;
+    btnExercises.setAttribute('href', infoCos.e[i].exercises);
+    btnDisqus.setAttribute('onclick', infoCos.e[i].disqus);
     videoUrl = infoCos.e[i].url;
     allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
     loadVimeo(allUrl);
   } else {
     titCos.innerHTML = infoCos.e[i].tit;
     textCosmic.innerHTML = infoCos.e[i].info;
+    btnExercises.setAttribute('href', infoCos.e[i].exercises);
+    btnDisqus.setAttribute('onclick', infoCos.e[i].disqus);
     videoUrl = infoCos.e[i].url;
     allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
     loadVimeo(allUrl);
@@ -396,5 +402,18 @@ function showSuscribe(c){
   suscribe.style.opacity = "0";
   setTimeout(function(){ suscribe.style.display = "none"; },500);
   break;
+  }
+}
+
+
+
+/* Disqus */
+function disqusCosmics(i, state){
+  if(state === true){
+    disqus[i].classList.remove('hideDisqus');
+    disqus[i].classList.add('showDisqus');
+  } else {
+    disqus[i].classList.remove('showDisqus');
+    disqus[i].classList.add('hideDisqus');
   }
 }

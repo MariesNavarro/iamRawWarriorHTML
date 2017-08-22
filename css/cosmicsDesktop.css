@@ -272,3 +272,56 @@
 .scaleUp{
   transform: scale(2.3);
 }
+
+
+/* DISCUS */
+.disqus{
+  position: absolute;
+  top: 0;
+  width: 60vw;
+  height: 100vh;
+  background: #f6eed9;
+  z-index: 6000;
+
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.hideDisqus{
+  left: -60vw;
+  opacity: 0;
+}
+.showDisqus{
+  left: 0;
+  opacity: 1;
+}
+.disqus>span{
+  position: relative;
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+.disqus>span>a{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 30px;
+  cursor: pointer;
+}
+.disqus>span>a:hover{
+  opacity: 0.5;
+}
+.disqus>h3{
+  display: block;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  color:#0e2635;
+  font-size: 1.3rem;
+}
+.disqus>img{
+  width: 100%;
+}
