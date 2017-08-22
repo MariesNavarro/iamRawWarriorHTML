@@ -430,3 +430,7 @@ display: none;
     margin-top: 150px;
   }
 }
+
+#disqus_thread{
+  margin-top: 80px;
+}

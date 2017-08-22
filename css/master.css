@@ -433,6 +433,7 @@ footer>#inner{
 
 /*  Redes Temporales  */
 #textIntro{
+  margin-top: 100px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -444,4 +445,7 @@ footer>#inner{
 #textIntro>span{
   display: inline-block;
   width: 30%;
+}
+#textIntro>span>a:hover{
+  opacity: 0.6;
 }

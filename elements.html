@@ -179,7 +179,7 @@ fluo.com.mx
     <div class="commentsDisqus">
         <h3>Comments on: Responsibility (1/7)</h3>
         <img class="closeDisqus" src="../img/icons/menuClose_b.svg" onclick="openDisqusR(0, false)">
-        <img class="borradorDisqus" src="../img/disqus.jpg">
+        <div id="disqus_thread"></div>
     </div>
 
   </section> <!-- GIF1 -->
@@ -221,7 +221,7 @@ fluo.com.mx
     <div class="commentsDisqus">
         <h3>Comments on: Awareness (2/7)</h3>
         <img class="closeDisqus" src="../img/icons/menuClose_b.svg" onclick="openDisqusR(1, false)">
-        <img class="borradorDisqus" src="../img/disqus.jpg">
+        <div id="disqus_thread"></div>
     </div>
   </section> <!-- GIF2 -->
 
@@ -256,7 +256,7 @@ fluo.com.mx
     <div class="commentsDisqus">
         <h3>Comments on: Willingness (3/7)</h3>
         <img class="closeDisqus" src="../img/icons/menuClose_b.svg" onclick="openDisqusR(2, false)">
-        <img class="borradorDisqus" src="../img/disqus.jpg">
+        <div id="disqus_thread"></div>
     </div>
   </section> <!-- GIF3 -->
 
@@ -312,7 +312,7 @@ fluo.com.mx
     <div class="commentsDisqus">
         <h3>Comments on: Human Sustainability (4/7)</h3>
         <img class="closeDisqus" src="../img/icons/menuClose_b.svg" onclick="openDisqusR(3, false)">
-        <img class="borradorDisqus" src="../img/disqus.jpg">
+        <div id="disqus_thread"></div>
     </div>
   </section> <!-- GIF4 -->
 
@@ -363,7 +363,7 @@ fluo.com.mx
     <div class="commentsDisqus">
         <h3>Comments on: Synthesizing (5/7)</h3>
         <img class="closeDisqus" src="../img/icons/menuClose_b.svg" onclick="openDisqusR(4, false)">
-        <img class="borradorDisqus" src="../img/disqus.jpg">
+        <div id="disqus_thread"></div>
     </div>
   </section> <!-- GIF5 -->
 
@@ -415,7 +415,7 @@ fluo.com.mx
     <div class="commentsDisqus">
         <h3>Comments on: Social Responsibility (6/7)</h3>
         <img class="closeDisqus" src="../img/icons/menuClose_b.svg" onclick="openDisqusR(5, false)">
-        <img class="borradorDisqus" src="../img/disqus.jpg">
+        <div id="disqus_thread"></div>
     </div>
   </section> <!-- GIF6 -->
 
@@ -467,7 +467,7 @@ fluo.com.mx
     <div class="commentsDisqus">
         <h3>Comments on: Continuity (7/7)</h3>
         <img class="closeDisqus" src="img/icons/menuClose_b.svg" onclick="openDisqusR(6, false)">
-        <img class="borradorDisqus" src="img/disqus.jpg">
+        <div id="disqus_thread"></div>
     </div>
 
   <footer>
@@ -489,8 +489,25 @@ fluo.com.mx
     function _(el){return document.getElementById(el); }
     function __(el){return document.getElementsByClassName(el); }
   </script>
-    <script src="js/elements.js" charset="utf-8"></script>
+  <script src="js/elements.js" charset="utf-8"></script>
   <script src="js/build/pixi.min.js" charset="utf-8"></script>
+  <script>
+		var page_url = window.location.href;
+		var disqus_config = function () {
+				this.page.url = page_url;
+				this.page.identifier = page_url;
+		};
 
+		(function() {
+				var d = document, s = d.createElement('script');
+
+				s.src = 'https://element-1.disqus.com/embed.js';
+
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+		})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="https://element-1.disqus.com/count.js" async></script>
 </body>
 </html>
