@@ -77,6 +77,7 @@ document.onkeydown = function(evt) {
 };
 
 function sliderCosmic(b, i){
+
   var num = [];
   if(i == 0){
     num = 1;
@@ -102,25 +103,96 @@ function sliderCosmic(b, i){
     allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
     loadVimeo(allUrl);
   }
+  for (var j = 0; j < bulletCosmic.length; j++) {
+    bulletCosmic[j].classList.remove('scaleUp');
+  }
+  bulletCosmic[i].classList.add('scaleUp');
 }
 
 function arrSliderCos(c){
-  if(urlValue > 0) countSlider = urlValue;
+  if(c === 0) countSlider--;
+  if(countSlider < 0 ) countSlider = 17;
+  if(c === 1) countSlider++;
+  if(countSlider > 17) countSlider = 0;
+  sliderCosmic(urlindex, countSlider)
+}
+
+function unBindBulletCosmic(c){
   switch (c) {
     case 0:
-    countSlider--;
-    if (countSlider < 0) countSlider = 17;
-    sliderCosmic(urlindex, countSlider);
+      countSlider = 0;
+      sliderCosmic(0,0);
     break;
     case 1:
-      countSlider++;
-      if (countSlider > 17) countSlider = 0;
-      sliderCosmic(urlindex, countSlider);
+      countSlider = 1;
+      sliderCosmic(1,1);
+    break;
+    case 2:
+      countSlider = 2;
+      sliderCosmic(2,2);
+    break;
+    case 3:
+      countSlider = 3;
+      sliderCosmic(3,3);
+    break;
+    case 4:
+      countSlider = 4;
+      sliderCosmic(4,4);
+    break;
+    case 5:
+      countSlider = 5;
+      sliderCosmic(5,5);
+    break;
+    case 6:
+      countSlider = 6;
+      sliderCosmic(6,6);
+    break;
+    case 7:
+      countSlider = 7;
+      sliderCosmic(7,7);
+    break;
+    case 8:
+      countSlider = 8;
+      sliderCosmic(8,8);
+    break;
+    case 9:
+      countSlider = 9;
+      sliderCosmic(9,9);
+    break;
+    case 10:
+      countSlider = 10;
+      sliderCosmic(10,10);
+    break;
+    case 11:
+      countSlider = 11;
+      sliderCosmic(11,11);
+    break;
+    case 12:
+      countSlider = 12;
+      sliderCosmic(12,12);
+    break;
+    case 13:
+      countSlider = 13;
+      sliderCosmic(13,13);
+    break;
+    case 14:
+      countSlider = 14;
+      sliderCosmic(14,14);
+    break;
+    case 15:
+      countSlider = 15;
+      sliderCosmic(15,15);
+    break;
+    case 16:
+      countSlider = 16;
+      sliderCosmic(16,16);
+    break;
+    case 17:
+      countSlider = 17;
+      sliderCosmic(17,17);
     break;
   }
 }
-
-
 
 function loadVimeo(url) {
   prevDup();

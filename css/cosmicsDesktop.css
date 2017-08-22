@@ -268,3 +268,7 @@
 #moreW>a>svg{
   position: absolute;
 }
+
+.scaleUp{
+  transform: scale(2.3);
+}
