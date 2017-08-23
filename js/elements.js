@@ -1,6 +1,5 @@
 var openFoot = false;
-var app,
-    footerDom = document.getElementsByTagName("FOOTER")[0],
+var footerDom = document.getElementsByTagName("FOOTER")[0],
     navDom = document.getElementsByTagName("NAV")[0],
     body = document.getElementsByTagName("BODY")[0],
     readMoreTitle = _('readMoreTitle'),
@@ -30,7 +29,9 @@ var scrollFooterFix;
     var swipeBullet = 0;
 
 var commentsDisqus = document.getElementsByClassName('commentsDisqus');
-
+window.onresize = function (){
+	document.getElementById("size").innerHTML = "W: " + window.innerWidth + "px | H: " + window.innerHeight + "px";
+}
     if(checkMobileIndex){
       console.log("Mobile elements");
       headDom.appendChild(linkDomMobile);
@@ -46,13 +47,11 @@ var commentsDisqus = document.getElementsByClassName('commentsDisqus');
         window.addEventListener("scroll", changeColorDesktop, false);
         setInnerMenu();
         setFooterHover();
-        sequencesDesktop(480);
+        sequencesDesktop(420);
         initInfoSlider();
         headDom.appendChild(linkDomDesktop);
         diveDeep.setAttribute('onclick', 'diveDeepFun(3)');
         backToInner.setAttribute('onclick', 'diveDeepFun(4)');
-
-
 
       setTimeout(function(){
         if(urlValue == 0){
@@ -82,7 +81,6 @@ var commentsDisqus = document.getElementsByClassName('commentsDisqus');
 
     sliderDesktop(0);
 
-
     function diveDeepFun(c){
       switch (c) {
       case 1:
@@ -105,7 +103,6 @@ var commentsDisqus = document.getElementsByClassName('commentsDisqus');
       break;
       }
     }
-
 
     function changeColorDesktop(){
       var hideArrow = readMoreTitle.getBoundingClientRect().top;

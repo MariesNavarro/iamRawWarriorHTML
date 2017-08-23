@@ -486,6 +486,7 @@ fluo.com.mx
   </footer>
   <script src="js/bowser.min.js" charset="utf-8"></script>
   <script type="text/javascript">
+  var app;
     var urlValue = window.location.href.slice(window.location.href.indexOf('=')+1);
     console.log("URL VALUE: " + urlValue);
     var headDom =  document.getElementsByTagName("HEAD")[0];
@@ -493,6 +494,7 @@ fluo.com.mx
     window.console.log("%cCoded by Mn - http://fluo.com.mx", "color:pink;  font-size: 10px; background:#000; padding:2px;");
     function _(el){return document.getElementById(el); }
     function __(el){return document.getElementsByClassName(el); }
+    if(bowser.mobile || bowser.tablet || /SymbianOS/.test(window.navigator.userAgent)) checkMobileIndex = true;
   </script>
   <script src="js/elements.js" charset="utf-8"></script>
   <script src="js/build/pixi.min.js" charset="utf-8"></script>
