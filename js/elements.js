@@ -4,6 +4,8 @@ var footerDom = document.getElementsByTagName("FOOTER")[0],
     body = document.getElementsByTagName("BODY")[0],
     readMoreTitle = _('readMoreTitle'),
     inner = _('inner'),
+    loading = _('loading'),
+    percentage = _('percentage'),
     subInner = _('subInner'),
     backToInner = _('backToInner'),
     bullet = __('bullet'),
@@ -33,13 +35,48 @@ window.onresize = function (){
 	document.getElementById("size").innerHTML = "W: " + window.innerWidth + "px | H: " + window.innerHeight + "px";
 }
     if(checkMobileIndex){
-      console.log("Mobile elements");
-      headDom.appendChild(linkDomMobile);
-      diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
-      backToInner.setAttribute('onclick', 'diveDeepFun(2)');
+      loading.style.display = "none";
+      // console.log("Mobile elements");
+      // headDom.appendChild(linkDomMobile);
+      // diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
+      // backToInner.setAttribute('onclick', 'diveDeepFun(2)');
+      // window.onload = function(){
+      //   setInnerMenuMobile();
+      //   setFooterHoverMobile();
+      // }
       window.onload = function(){
-        setInnerMenuMobile();
-        setFooterHoverMobile();
+        window.addEventListener("scroll", changeColorDesktop, false);
+        setInnerMenu();
+        setFooterHover();
+        sequencesDesktop(420);
+        initInfoSlider();
+        headDom.appendChild(linkDomDesktop);
+        diveDeep.setAttribute('onclick', 'diveDeepFun(3)');
+        backToInner.setAttribute('onclick', 'diveDeepFun(4)');
+
+      setTimeout(function(){
+        if(urlValue == 0){
+          slider(0);
+        }
+        if(urlValue == 1){
+          slider(1);
+        }
+        if(urlValue == 2){
+          slider(2);
+        }
+        if(urlValue == 3){
+          slider(3);
+        }
+        if(urlValue == 4){
+          slider(4);
+        }
+        if(urlValue == 5){
+          slider(5);
+        }
+        if(urlValue == 6){
+          slider(6);
+        }
+      },1000);
       }
     } else{
       console.log("Desktop elements");
@@ -329,14 +366,12 @@ window.onresize = function (){
 
 function sequencesDesktop(size){
   app = new PIXI.Application(size, size,{antialias: true, transparent: true, resolution: 1});
-  // app.view.style.background = "green";
   sliderGif.appendChild(app.view);
   PIXI.loader
   .add('../img/seqGif/desktop/gifDes1_1.json')
   .add('../img/seqGif/desktop/gifDes1_2.json')
 
   .add('../img/seqGif/desktop/gifDes2_1.json')
-  // .add('../img/seqGif/desktop/desktopgif2_2.json')
 
   .add('../img/seqGif/desktop/gifDes3_1.json')
   .add('../img/seqGif/desktop/gifDes3_2.json')
