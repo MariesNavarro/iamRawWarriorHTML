@@ -132,6 +132,7 @@ p {
   left: calc(50% -  210px);
   top: 20px;
   overflow: hidden;
+  z-index: 2000;
   /*border: 1px solid red;*/
 }
 #sliderGif>canvas{
@@ -480,6 +481,7 @@ display: none;
     width: 280px;
     height: 280px;
     left: calc(50% -  140px);
+    z-index: 2000;
   }
   #eW{
     width: 280px;
