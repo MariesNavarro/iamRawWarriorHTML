@@ -58,6 +58,7 @@ fluo.com.mx
   <div id="loading">
     <p id="percentage">1%</p>
     <img src="img/logos/logo-rawwarrior-small.svg" title="Logo Raw Warrior" alt="Logo Raw Warrior for loading" width="110" height="110">
+    <span>Please wait this may take a few seconds</span>
   </div>
   <nav>
     <div id="outer">
@@ -486,7 +487,26 @@ fluo.com.mx
   </footer>
   <script src="js/bowser.min.js" charset="utf-8"></script>
   <script type="text/javascript">
-  var app;
+    var fakeCount = 1;
+    var countPercentage;
+    function fakePercentage(){
+      countPercentage = setInterval(function(){
+        percentage.innerHTML = fakeCount + '%';
+        fakeCount++;
+        if(fakeCount>100){
+          fakeCount = 100;
+          stopFakeCount();
+        }
+      },300);
+    }
+
+    function stopFakeCount(){
+      clearInterval(countPercentage);
+    }
+
+    fakePercentage();
+
+    var app;
     var urlValue = window.location.href.slice(window.location.href.indexOf('=')+1);
     console.log("URL VALUE: " + urlValue);
     var headDom =  document.getElementsByTagName("HEAD")[0];

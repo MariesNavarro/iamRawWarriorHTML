@@ -139,6 +139,14 @@ h1, h2, h3, h4{
   text-align: center;
   margin-left: 0;
 }
+#loading > span{
+  display: block;
+  width: 200px;
+  position: absolute;
+  left: calc(50% - 100px);
+  top: calc(50% + 25px);
+  text-align: center;
+}
 #percentage{
   font-size: 16px;
   color: #f6eed9;

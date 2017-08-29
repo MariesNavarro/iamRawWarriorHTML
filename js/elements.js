@@ -438,6 +438,9 @@ function sequencesDesktop(size){
   .on('progress', function (loader, loadedResource) {
       var num = Math.round(loader.progress);
       percentage.innerHTML = num + '%';
+      if(num>30){
+        stopFakeCount();
+      }
       if(num>99){
         loading.style.opacity = 0;
         setTimeout(function(){ loading.style.display = "none" },1000);
