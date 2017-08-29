@@ -298,8 +298,8 @@
 .disqus>object{
   position: absolute;
   top: 80px;
-  width: 90vw;
-  left: 5vw;
+  width: 90%;
+  left: 5%;
 }
 .hideDisqus{
   left: -60vw;
