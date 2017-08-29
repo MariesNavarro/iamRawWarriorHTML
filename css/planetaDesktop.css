@@ -59,6 +59,12 @@ p {
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
+.commentsDisqus>object{
+  position: absolute;
+  top: 80px;
+  left: 5vw;
+  width: 90vw;
+}
 .commentsDisqus>h3{
   position: absolute;
   top: 35px;
