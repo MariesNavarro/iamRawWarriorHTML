@@ -27,6 +27,7 @@ bulletCosmic = __('bulletCosmic'),
 btnExercises = _('btnExercises'),
 btnDisqus = _('btnDisqus'),
 disqus = __('disqus'),
+shareBtnFb = __('shareBtnFb')[0],
 menuBtn = _('menuBtn');
 navDom.style.opacity = "1";
 footerDom.style.opacity = "1";
@@ -93,6 +94,7 @@ function sliderCosmic(b, i){
         countSuscribe = 0;
         showSuscribe(1);
       }
+    shareBtnFb.id = infoCos.e[i].shareFb;
     titCos.innerHTML = infoCos.e[i].tit;
     textCosmic.innerHTML = infoCos.e[i].info;
     btnExercises.setAttribute('href', infoCos.e[i].exercises);
@@ -101,6 +103,7 @@ function sliderCosmic(b, i){
     allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
     loadVimeo(allUrl);
   } else {
+    shareBtnFb.id = infoCos.e[i].shareFb;
     titCos.innerHTML = infoCos.e[i].tit;
     textCosmic.innerHTML = infoCos.e[i].info;
     btnExercises.setAttribute('href', infoCos.e[i].exercises);
