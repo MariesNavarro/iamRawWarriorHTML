@@ -20,12 +20,16 @@ var footerDom = document.getElementsByTagName("FOOTER")[0],
     sliderArrows = _('sliderArrows');
     var linkDomMobile  = document.createElement('LINK');
     var linkDomDesktop = document.createElement('LINK');
+    var linkDomHomeMobile = document.createElement('LINK');
     linkDomMobile.rel  = 'stylesheet';
     linkDomMobile.type = 'text/css';
     linkDomMobile.href = "css/planetaMobile.css";
     linkDomDesktop.rel  = 'stylesheet';
     linkDomDesktop.type = 'text/css';
     linkDomDesktop.href = "css/planetaDesktop.css";
+    linkDomHomeMobile.rel  = 'stylesheet';
+    linkDomHomeMobile.type = 'text/css';
+    linkDomHomeMobile.href = "css/homeMobile.css";
 var scrollFooterFix;
     navDom.style.opacity = "1";
     footerDom.style.opacity = "1";
@@ -39,24 +43,16 @@ window.onresize = function (){
 	document.getElementById("size").innerHTML = "W: " + window.innerWidth + "px | H: " + window.innerHeight + "px";
 }
     if(checkMobileIndex){
-      loading.style.display = "none";
-      // console.log("Mobile elements");
-      // headDom.appendChild(linkDomMobile);
-      // diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
-      // backToInner.setAttribute('onclick', 'diveDeepFun(2)');
-      // window.onload = function(){
-      //   setInnerMenuMobile();
-      //   setFooterHoverMobile();
-      // }
-      window.onload = function(){
+    window.onload = function(){
         window.addEventListener("scroll", changeColorDesktop, false);
-        setInnerMenu();
-        setFooterHover();
+        setInnerMenuMobile();
+        setFooterHoverMobile();
         sequencesDesktop(420);
         initInfoSlider();
         headDom.appendChild(linkDomDesktop);
-        diveDeep.setAttribute('onclick', 'diveDeepFun(3)');
-        backToInner.setAttribute('onclick', 'diveDeepFun(4)');
+        headDom.appendChild(linkDomHomeMobile);
+        diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
+        backToInner.setAttribute('onclick', 'diveDeepFun(2)');
 
       setTimeout(function(){
         if(urlValue == 0){
@@ -442,6 +438,20 @@ function diveDeepFun(c){
     subInner.style.right = "-225px";
     inner.style.display = "block";
     menuBtn.style.display = "block";
+  break;
+  }
+}
+
+
+function overMobile(s){
+  switch (s) {
+  case 1:
+  inner.style.display = "block";
+  setTimeout(function(){ inner.style.opacity = "1"; },500);
+  break;
+  case 2:
+  inner.style.opacity = "0";
+  setTimeout(function(){ inner.style.display = "none"; },700);
   break;
   }
 }

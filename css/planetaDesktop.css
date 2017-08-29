@@ -277,6 +277,17 @@ display: none;
   line-height: 50px;
   margin-top: 5%;
   text-align: center;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content:center;
+  -webkit-justify-content:center;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  align-items: center;
+  -webkit-align-items: center;
 }
 #moreVideoW>a{
   display: inline-block;
@@ -289,7 +300,6 @@ display: none;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-family: 'Garamond B', sans-serif;
-  margin: 10px auto;
   cursor: pointer;
 
   -webkit-transition: background 0.5s ease-out;
@@ -429,6 +439,13 @@ display: none;
 @media screen and (max-width:600px){
   #sliderArrows{
     display: none;
+  }
+  #moreVideoW{
+    margin-top: 10%;
+    height: 180px;
+    flex-direction: column;
+    -webkit-flex-direction:column;
+    justify-content: space-around;
   }
 }
 
