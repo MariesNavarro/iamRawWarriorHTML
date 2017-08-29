@@ -254,7 +254,7 @@
   text-align: center;
 }
 #shareW>div>a{
-  display: inline-block;
+  display: none;
 }
 #shareW>div>a:first-child{
   margin-right: 10px;
