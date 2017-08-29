@@ -1,3 +1,7 @@
+var scriptDisqus = document.createElement('SCRIPT');
+    scriptDisqus.id  = 'dsq-count-scr';
+    scriptDisqus.defer = 'defer';
+
 var openFoot = false;
 var footerDom = document.getElementsByTagName("FOOTER")[0],
     navDom = document.getElementsByTagName("NAV")[0],

@@ -180,7 +180,7 @@ fluo.com.mx
     <div class="commentsDisqus">
         <h3>Comments on: Responsibility (1/7)</h3>
         <img class="closeDisqus" src="../img/icons/menuClose_b.svg" onclick="openDisqusR(0, false)">
-        <div id="disqus_thread"></div>
+        <object type="text/html" data="disqus/thread1.html"></object>
     </div>
   </section> <!-- GIF1 -->
   <section class="gifInfo">
@@ -221,7 +221,7 @@ fluo.com.mx
     <div class="commentsDisqus">
         <h3>Comments on: Awareness (2/7)</h3>
         <img class="closeDisqus" src="../img/icons/menuClose_b.svg" onclick="openDisqusR(1, false)">
-        <!-- <div id="disqus_thread"></div> -->
+        <object type="text/html" data="disqus/thread2.html"></object>
     </div>
   </section> <!-- GIF2 -->
 
@@ -498,24 +498,6 @@ fluo.com.mx
   </script>
   <script src="js/elements.js" charset="utf-8"></script>
   <script src="js/build/pixi.min.js" charset="utf-8"></script>
-  <script>
-		var page_url = window.location.href;
-		var disqus_config = function () {
-				this.page.url = page_url;
-				this.page.identifier = page_url;
-		};
-
-		(function() {
-				var d = document, s = d.createElement('script');
-
-				s.src = 'https://element-1.disqus.com/embed.js';
-
-				s.setAttribute('data-timestamp', +new Date());
-				(d.head || d.body).appendChild(s);
-		})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-<script id="dsq-count-scr" src="https://element-1.disqus.com/count.js" async></script>
-<script src="js/elementsShare.js" charset="utf-8"></script>
+  <script src="js/elementsShare.js" charset="utf-8"></script>
 </body>
 </html>
