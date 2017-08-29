@@ -48,7 +48,7 @@ p {
 .commentsDisqus{
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 400vh;
   background: #f6eed9;
   z-index: 9000;
   top: 100vh;
@@ -66,6 +66,7 @@ p {
   top: 80px;
   left: 5vw;
   width: 90vw;
+
 }
 .commentsDisqus>h3{
   position: absolute;
@@ -455,14 +456,8 @@ display: none;
 
 @media screen and (max-width:400px){
   #sharePost{
-    margin-top: 150px;
+    margin-top: 50px;
   }
-}
-
-#disqus_thread{
-  margin-top: 120px;
-  width: 90vw;
-  margin-left: 5vw;
 }
 
 /* Resposive */

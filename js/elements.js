@@ -12,6 +12,7 @@ var footerDom = document.getElementsByTagName("FOOTER")[0],
     objectThread = __('objectThread'),
     readMoreTitle = _('readMoreTitle'),
     inner = _('inner'),
+    eW = _('eW'),
     loading = _('loading'),
     percentage = _('percentage'),
     subInner = _('subInner'),
@@ -54,7 +55,7 @@ window.onresize = function (){
         setInnerMenuMobile();
         setFooterHoverMobile();
         sequencesDesktop();
-        detectswipe('main', swipeTransform);
+        detectswipe('eW', swipeTransform);
         initInfoSlider();
         headDom.appendChild(linkDomDesktop);
         headDom.appendChild(linkDomHomeMobile);

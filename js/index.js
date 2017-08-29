@@ -179,6 +179,8 @@ function indexLandscape(){
 
 function onWindowOrientation(event){
   if(window.orientation == 90 || window.orientation == -90){
+    blockLandscapeAndroid.classList.remove('hideBlockLand');
+    blockLandscapeAndroid.classList.add('showBlockLand');
     if (bowser.android) {
         blockLandscapeAndroid.classList.remove('hideBlockLand');
         blockLandscapeAndroid.classList.add('showBlockLand');
@@ -198,6 +200,8 @@ function onWindowOrientation(event){
       camera.lookAt( scene.position );
     }
   } else {
+    blockLandscapeAndroid.classList.remove('showBlockLand');
+    blockLandscapeAndroid.classList.add('hideBlockLand');
     if (bowser.android) {
       blockLandscapeAndroid.classList.remove('showBlockLand');
       blockLandscapeAndroid.classList.add('hideBlockLand');
