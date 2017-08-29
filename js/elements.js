@@ -49,8 +49,8 @@ window.onresize = function (){
         outer.style.top = "-30px";
         setInnerMenuMobile();
         setFooterHoverMobile();
-        sequencesDesktop(420);
-        detectswipe('sliderGif', swipeTransform);
+        sequencesDesktop();
+        detectswipe('main', swipeTransform);
         initInfoSlider();
         headDom.appendChild(linkDomDesktop);
         headDom.appendChild(linkDomHomeMobile);
@@ -87,7 +87,7 @@ window.onresize = function (){
         window.addEventListener("scroll", changeColorDesktop, false);
         setInnerMenu();
         setFooterHover();
-        sequencesDesktop(420);
+        sequencesDesktop();
         initInfoSlider();
         headDom.appendChild(linkDomDesktop);
         diveDeep.setAttribute('onclick', 'diveDeepFun(3)');
@@ -408,44 +408,31 @@ window.onresize = function (){
   }
 }
 
-function sequencesDesktop(size){
-  app = new PIXI.Application(size, size,{antialias: true, transparent: true, resolution: 1});
-  sliderGif.appendChild(app.view);
-  PIXI.loader
-  .add('../img/seqGif/desktop/gifDes1_1.json')
-  .add('../img/seqGif/desktop/gifDes1_2.json')
-
-  .add('../img/seqGif/desktop/gifDes2_1.json')
-
-  .add('../img/seqGif/desktop/gifDes3_1.json')
-  .add('../img/seqGif/desktop/gifDes3_2.json')
-
-  .add('../img/seqGif/desktop/gifDes4_1.json')
-  .add('../img/seqGif/desktop/gifDes4_2.json')
-
-  .add('../img/seqGif/desktop/gifDes5_1.json')
-  .add('../img/seqGif/desktop/gifDes5_2.json')
-
-  .add('../img/seqGif/desktop/gifDes6_1.json')
-  .add('../img/seqGif/desktop/gifDes6_2.json')
-
-  .add('../img/seqGif/desktop/gifDes7_1.json')
-  .add('../img/seqGif/desktop/gifDes7_2.json')
-
-  .load(function(){
-    createAnimation(0,113,'gif1_', app.renderer, app.stage, true);
-  })
-  .on('progress', function (loader, loadedResource) {
-      var num = Math.round(loader.progress);
-      percentage.innerHTML = num + '%';
-      if(num>30){
-        stopFakeCount();
-      }
-      if(num>99){
-        loading.style.opacity = 0;
-        setTimeout(function(){ loading.style.display = "none" },1000);
-      }
-  })
+function sequencesDesktop(){
+    app = new PIXI.Application(480, 480,{antialias: true, transparent: true, resolution: 1});
+    sliderGif.appendChild(app.view);
+    PIXI.loader
+    .add('../img/seqGif/mobile/gif1_1.json')
+    .add('../img/seqGif/mobile/gif2_1.json')
+    .add('../img/seqGif/mobile/gif3_1.json')
+    .add('../img/seqGif/mobile/gif4_1.json')
+    .add('../img/seqGif/mobile/gif5_1.json')
+    .add('../img/seqGif/mobile/gif6_1.json')
+    .add('../img/seqGif/mobile/gif7_1.json')
+    .load(function(){
+      createAnimation(0,113,'gif1_', app.renderer, app.stage, true);
+    })
+    .on('progress', function (loader, loadedResource) {
+        var num = Math.round(loader.progress);
+        percentage.innerHTML = num + '%';
+        if(num>30){
+          stopFakeCount();
+        }
+        if(num>99){
+          loading.style.opacity = 0;
+          setTimeout(function(){ loading.style.display = "none" },1000);
+        }
+    })
 }
 
 function createAnimation(start, end, pathGif, appRender, appStage, onStage) {
@@ -454,8 +441,10 @@ function createAnimation(start, end, pathGif, appRender, appStage, onStage) {
       framesTemp.push(PIXI.Texture.fromFrame(pathGif + i + '.png'));
   }
   var ani = new PIXI.extras.AnimatedSprite(framesTemp);
-    ani.x = (appRender.width / 2) - 10;
-    ani.y = (appRender.height / 2) - 10;
+    ani.x = (appRender.width / 2);
+    ani.y = (appRender.height / 2);
+    ani.width = appRender.width;
+    ani.height = appRender.height;
     ani.anchor.set(0.5);
     ani.animationSpeed = 0.16;
 
