@@ -10,12 +10,15 @@ callback = 'embedVideo',
 videoUrl,
 allUrl,
 loading = _('loading'),
+embed = _('embed'),
+swipeEl = _('swipeEl'),
 percentage = _('percentage'),
 arrowLeftDesk = _('arrowLeftDesk'),
 arrowRightDesk = _('arrowRightDesk'),
 suscribe = _('suscribe'),
 titCos = _('titCos'),
 menuBo = _('menuBo'),
+videoContainer = _('videoContainer'),
 changeNumCos = _('changeNumCos'),
 imgBtnInfo = _('imgBtnInfo'),
 infoBtnW = _('infoBtnW'),
@@ -39,6 +42,9 @@ footerDom.style.opacity = "1";
 
 if(checkMobileIndex){
   window.onload = function(){
+    videoContainer.style.width = "100%";
+    videoContainer.style.left = "0";
+
     arrowRightDesk.style.display = "none";
     arrowLeftDesk.style.display = "none";
     footerDom.style.display = "none";
@@ -52,7 +58,7 @@ if(checkMobileIndex){
     main.style.left = "0";
     videoInfoContainer.style.width = widthInfo + "vw";
     videoInfoContainer.style.left = -widthInfo + "%";
-    
+
     setInnerMenuMobile();
     setFooterHoverMobile();
     loadInfoJson();
@@ -71,7 +77,6 @@ if(checkMobileIndex){
   }
 }
 
-
 var countPercentage = 1;
 var percentageComplete = false;
 function loadingPercentage(){
@@ -89,7 +94,6 @@ function loadingPercentage(){
     clearInterval(countSet);
   }
 }
-
 
 function loadInfoJson(){
   var req;
@@ -121,6 +125,8 @@ document.onkeydown = function(evt) {
   }
 };
 
+var iframeDom = document.createElement('IFRAME');
+// <iframe id="mockWebFrame" src="https://player.vimeo.com/video/229164241?api=1&autoplay=1&loop=1" width="640" height="346" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen onload="readyWeb()"></iframe>
 function sliderCosmic(b, i){
   for (var x = 0; x < shareFbCos.length; x++) {
     shareFbCos[x].style.display = "none"
@@ -145,7 +151,7 @@ function sliderCosmic(b, i){
     btnDisqus.setAttribute('onclick', infoCos.e[i].disqus);
     videoUrl = infoCos.e[i].url;
     if(checkMobileIndex){
-      allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=580' + '&color=f6eeda';
+      allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&width=320' + '&color=f6eeda';
     } else {
       allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
     }
@@ -158,7 +164,7 @@ function sliderCosmic(b, i){
     btnDisqus.setAttribute('onclick', infoCos.e[i].disqus);
     videoUrl = infoCos.e[i].url;
     if(checkMobileIndex){
-      allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=580' + '&color=f6eeda';
+      allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&width=320' + '&color=f6eeda';
     } else {
       allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
     }
@@ -179,8 +185,70 @@ function arrSliderCos(c){
 }
 
 
+function vimeoMobileLoad(){
+  console.log("Mobile vimeo loaded");
+}
 
+function detectswipe(el,func) {
+  swipe_det = new Object();
+  swipe_det.sX = 0;
+  swipe_det.sY = 0;
+  swipe_det.eX = 0;
+  swipe_det.eY = 0;
+  var min_x = 20;
+  var max_x = 40;
+  var min_y = 40;
+  var max_y = 50;
+  var direc = "";
+  ele = document.getElementById(el);
+  ele.addEventListener('touchstart',function(e){
+  var t = e.touches[0];
+  swipe_det.sX = t.screenX;
+  swipe_det.sY = t.screenY;
+  },false);
 
+  ele.addEventListener('touchmove',function(e){
+  e.preventDefault();
+  var t = e.touches[0];
+  swipe_det.eX = t.screenX;
+  swipe_det.eY = t.screenY;
+  },false);
+
+  ele.addEventListener('touchend',function(e){
+  if ((((swipe_det.eX - min_x > swipe_det.sX) || (swipe_det.eX + min_x < swipe_det.sX)) && ((swipe_det.eY < swipe_det.sY + max_y) && (swipe_det.sY > swipe_det.eY - max_y)))) {
+  if(swipe_det.eX > swipe_det.sX) direc = "r";
+  else direc = "l";
+  }
+  if (direc != "") {
+    if(typeof func == 'function') func(el,direc);
+  }
+  direc = "";
+  },false);
+} //detectSwipe
+
+var tapedTwice = false;
+
+detectswipe('swipeEl', swipeTransform);
+
+swipeEl.addEventListener("touchstart", tapHandler);
+function tapHandler(event) {
+    if(!tapedTwice) {
+        tapedTwice = true;
+        setTimeout( function() { tapedTwice = false; }, 300 );
+        return false;
+    }
+    event.preventDefault();
+    console.log('You tapped me Twice !!!');
+ }
+
+function swipeTransform(el,d) {
+  if(d == "l") {
+      console.log("Swipe lado izquierdo");
+  } //l
+  if(d == "r"){
+    console.log("Swipe lado derecho");
+  } //r
+}
 
 function unBindBulletCosmic(c){
   switch (c) {

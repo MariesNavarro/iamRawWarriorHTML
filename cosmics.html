@@ -56,7 +56,7 @@ fluo.com.mx
 <body class="bodyGradient">
   <p id="size"></p>
   <div id="sizeHome" style="z-index:-1000"></div>
-  <div id="loading" style="display:block">
+  <div id="loading" style="display:none">
     <p id="percentage">1%</p>
     <img src="img/logos/logo-rawwarrior-small.svg" title="Logo Raw Warrior" alt="Logo Raw Warrior for loading" width="110" height="110">
   </div>
@@ -115,6 +115,10 @@ fluo.com.mx
       <section id="videoContainer">
         <div class="loadingvimeo"><img id="logoSpinSmall" src="img/logos/logo-rawwarrior-small.svg" alt="Logo Raw Warrior Small" width="60" height="60"></div>
         <div class="loadingvimeo" id="embed"><img id="logoSpinSmall" src="img/logos/logo-rawwarrior-small.svg" alt="Logo Raw Warrior Small" width="60" height="60"></div>
+        <div id="swipeCosmic">
+          <div id="swipeEl"></div>
+          <a id="mobilePlayBtn" role="button">Play the video</a>
+        </div>
       </section>
       <a id="arrowRightDesk" role="button" onclick="arrSliderCos(1)"> <img src="img/icons/arrow.svg" alt="Icon Right Arrow" width="30" height="30"> </a>
 
@@ -147,9 +151,7 @@ fluo.com.mx
       <div>
         <a id="closeBtnInfo" role="button" onclick="showInfo('close')"> <img src="img/icons/menuClose_b.svg" alt="Icon close info" width="25" height="25"> </a>
         <h1 id="titCos">Cosmic 1</h1>
-        <p id="textCosmic">
-
-        </p>
+        <p id="textCosmic"></p>
         <div id="moreW">
               <a id="btnExercises" href="" role="button" onmouseover="overBtn('overEx')" onmouseout="overBtn('outEx')">
                 <svg class="svgView" viewBox="0 0 204 83"> <path class="frameBorder transitionClass" fill="none" stroke="#0e2635" stroke-width="2" stroke-miterlimit="10" d="M2,3.1h200.9V76H2V3.1z" style="stroke-dasharray: 547.6, 547.6; stroke-dashoffset: 0;"></path></svg>
@@ -186,7 +188,6 @@ fluo.com.mx
             <a id="cosmicShare16" class="shareFbCos" role="button"><img src="img/icons/facebookE.svg" alt="Icon share on facebook" width="100" height="40" onmouseover="changeIcon('over', this)" onmouseout="changeIcon('out', this)"></a>
             <a id="cosmicShare17" class="shareFbCos" role="button"><img src="img/icons/facebookE.svg" alt="Icon share on facebook" width="100" height="40" onmouseover="changeIcon('over', this)" onmouseout="changeIcon('out', this)"></a>
             <a id="cosmicShare18" class="shareFbCos" role="button"><img src="img/icons/facebookE.svg" alt="Icon share on facebook" width="100" height="40" onmouseover="changeIcon('over', this)" onmouseout="changeIcon('out', this)"></a>
-
           </div>
         </div>
       </div>
@@ -402,6 +403,6 @@ fluo.com.mx
   </script>
   <script src="js/cosmics.js" charset="utf-8" async></script>
   <script src="js/build/pixi.min.js" charset="utf-8"></script>
-  <script src="js/cosmicsShare.js" charset="utf-8" async></script>
+  <!-- <script src="js/cosmicsShare.js" charset="utf-8" async></script> -->
 </body>
 </html>
