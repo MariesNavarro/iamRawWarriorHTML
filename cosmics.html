@@ -201,8 +201,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 1: Comments</h3>
-
-
+      <object type="text/html" data="disqus/cthread1.html"></object>
     </section>
     <!-- 2 -->
     <section class="disqus hideDisqus">
@@ -212,7 +211,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 2: Comments</h3>
-      <div id="disqus_thread"></div>
+      <object type="text/html" data="disqus/cthread2.html"></object>
     </section>
     <!-- 3 -->
     <section class="disqus hideDisqus">
@@ -222,6 +221,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 3: Comments</h3>
+      <object type="text/html" data="disqus/cthread3.html"></object>
     </section>
     <!-- 4 -->
     <section class="disqus hideDisqus">
@@ -231,6 +231,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 4: Comments</h3>
+      <object type="text/html" data="disqus/cthread4.html"></object>
     </section>
     <!-- 5 -->
     <section class="disqus hideDisqus">
@@ -240,6 +241,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 5: Comments</h3>
+      <object type="text/html" data="disqus/cthread5.html"></object>
     </section>
     <!-- 6 -->
     <section class="disqus hideDisqus">
@@ -249,6 +251,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 6: Comments</h3>
+      <object type="text/html" data="disqus/cthread6.html"></object>
     </section>
     <!-- 7 -->
     <section class="disqus hideDisqus">
@@ -258,6 +261,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 7: Comments</h3>
+      <object type="text/html" data="disqus/cthread7.html"></object>
     </section>
     <!-- 8 -->
     <section class="disqus hideDisqus">
@@ -267,6 +271,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 8: Comments</h3>
+      <object type="text/html" data="disqus/cthread8.html"></object>
     </section>
     <!-- 9 -->
     <section class="disqus hideDisqus">
@@ -276,6 +281,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 9: Comments</h3>
+      <object type="text/html" data="disqus/cthread9.html"></object>
     </section>
     <!-- 10 -->
     <section class="disqus hideDisqus">
@@ -285,6 +291,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 10: Comments</h3>
+      <object type="text/html" data="disqus/cthread10.html"></object>
     </section>
     <!-- 11 -->
     <section class="disqus hideDisqus">
@@ -294,6 +301,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 11: Comments</h3>
+      <object type="text/html" data="disqus/cthread11.html"></object>
     </section>
     <!-- 12 -->
     <section class="disqus hideDisqus">
@@ -303,6 +311,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 12: Comments</h3>
+      <object type="text/html" data="disqus/cthread12.html"></object>
     </section>
     <!-- 13 -->
     <section class="disqus hideDisqus">
@@ -312,6 +321,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 13: Comments</h3>
+      <object type="text/html" data="disqus/cthread13.html"></object>
     </section>
     <!-- 14 -->
     <section class="disqus hideDisqus">
@@ -321,6 +331,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 14: Comments</h3>
+      <object type="text/html" data="disqus/cthread14.html"></object>
     </section>
     <!-- 15 -->
     <section class="disqus hideDisqus">
@@ -330,6 +341,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 15: Comments</h3>
+      <object type="text/html" data="disqus/cthread15.html"></object>
     </section>
     <!-- 16 -->
     <section class="disqus hideDisqus">
@@ -339,6 +351,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 16: Comments</h3>
+      <object type="text/html" data="disqus/cthread16.html"></object>
     </section>
     <!-- 17 -->
     <section class="disqus hideDisqus">
@@ -348,6 +361,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 17: Comments</h3>
+      <object type="text/html" data="disqus/cthread17.html"></object>
     </section>
     <!-- 18 -->
     <section class="disqus hideDisqus">
@@ -357,6 +371,7 @@ fluo.com.mx
         </a>
       </span>
       <h3>Cosmic 18: Comments</h3>
+      <object type="text/html" data="disqus/cthread18.html"></object>
     </section>
 
 
@@ -385,25 +400,8 @@ fluo.com.mx
     var checkMobileIndex = false;
     if(bowser.mobile || bowser.tablet || /SymbianOS/.test(window.navigator.userAgent)) checkMobileIndex = true;
   </script>
-    <script src="js/cosmics.js" charset="utf-8" async></script>
+  <script src="js/cosmics.js" charset="utf-8" async></script>
   <script src="js/build/pixi.min.js" charset="utf-8"></script>
-  <script>
-		var page_url = window.location.href;
-		var disqus_config = function () {
-				this.page.url = page_url;
-		};
-
-		(function() {
-				var d = document, s = d.createElement('script');
-
-				s.src = 'https://cosmic-1.disqus.com/embed.js';
-
-				s.setAttribute('data-timestamp', +new Date());
-				(d.head || d.body).appendChild(s);
-		})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-<script id="dsq-count-scr" src="https://cosmic-1.disqus.com/count.js" async></script>
-<script src="js/cosmicsShare.js" charset="utf-8" async></script>
+  <script src="js/cosmicsShare.js" charset="utf-8" async></script>
 </body>
 </html>

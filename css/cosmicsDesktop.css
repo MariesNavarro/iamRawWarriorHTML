@@ -295,6 +295,12 @@
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
+.disqus>object{
+  position: absolute;
+  top: 80px;
+  width: 90vw;
+  left: 5vw;
+}
 .hideDisqus{
   left: -60vw;
   opacity: 0;
