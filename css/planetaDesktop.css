@@ -2,10 +2,12 @@
 Theme: Raw Warriors;
 Version : Versión 1 de Junio
 */
+.objectThread{
+  display: none;
+}
 html{
   overflow: auto !important;
   /*height: auto;*/
-
 }
 body{
   overflow: auto !important;
@@ -350,6 +352,7 @@ display: none;
   text-decoration: none;
   color: #0e2635;
   font-size: 1.4rem;
+  cursor: pointer;
 }
 
 #eW{

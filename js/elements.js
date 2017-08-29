@@ -2,10 +2,14 @@ var scriptDisqus = document.createElement('SCRIPT');
     scriptDisqus.id  = 'dsq-count-scr';
     scriptDisqus.defer = 'defer';
 
+    var objectDom = document.createElement('OBJECT');
+    objectDom.type = "text/html";
+
 var openFoot = false;
 var footerDom = document.getElementsByTagName("FOOTER")[0],
     navDom = document.getElementsByTagName("NAV")[0],
     body = document.getElementsByTagName("BODY")[0],
+    objectThread = __('objectThread'),
     readMoreTitle = _('readMoreTitle'),
     inner = _('inner'),
     loading = _('loading'),
@@ -602,8 +606,11 @@ function changeIconShare(c, url, e){
 }
 
 
+
 function openDisqusR(n, state){
   if(state == true){
+    objectDom.setAttribute('data', 'disqus/thread'+ n +'e.html');
+    commentsDisqus[n].appendChild(objectDom);
     commentsDisqus[n].style.display = "block";
       setTimeout(function(){
         commentsDisqus[n].style.top = "0";
