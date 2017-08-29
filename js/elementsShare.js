@@ -28,7 +28,7 @@
                'og:description': 'We refer to Responsibility as our individual ability to respond to any given context using our tools and resources to perceive, synthesize, and respond to any and all life circumstances.' ,
                'og:og:image:width': '1300',
                'og:image:height': '630',
-               'og:image': 'http://iamrawwarrior.com/img/element1.jpg'
+               'og:image': 'http://iamrawwarrior.com/img/share/element1.jpg'
             }
 					})
 				}, function(response){});
@@ -46,7 +46,7 @@
                'og:description': 'We refer to Awareness as the space in between stimulus and response. It is here where we are expanded or contracted.' ,
                'og:og:image:width': '1300',
                'og:image:height': '630',
-               'og:image': 'http://iamrawwarrior.com/img/element2.jpg'
+               'og:image': 'http://iamrawwarrior.com/img/share/element2.jpg'
             }
 					})
 				}, function(response){});
@@ -64,7 +64,7 @@
                'og:description': 'We refer to Willingness as converging all elements; the propelling energy towards one’s life meaning and purpose.' ,
                'og:og:image:width': '1300',
                'og:image:height': '630',
-               'og:image': 'http://iamrawwarrior.com/img/element3.jpg'
+               'og:image': 'http://iamrawwarrior.com/img/share/element3.jpg'
             }
 					})
 				}, function(response){});
@@ -82,7 +82,7 @@
                'og:description': 'We refer to Human Sustainability as a narrative that promotes activation through self-awareness and the organic motivation that it ignites, where collectives are propelled by a shared sense of purpose and meaning, which are built on genuine trust from the individuals that form them.' ,
                'og:og:image:width': '1300',
                'og:image:height': '630',
-               'og:image': 'http://iamrawwarrior.com/img/element4.jpg'
+               'og:image': 'http://iamrawwarrior.com/img/share/element4.jpg'
             }
 					})
 				}, function(response){});
@@ -100,7 +100,7 @@
                'og:description': 'We refer to Synthesizing as the capacity wherewith an individual perceives, extracts, and converts value from the reality to which he/she is exposed. This is relevant because here lies our capacity to experience life.' ,
                'og:og:image:width': '1300',
                'og:image:height': '630',
-               'og:image': 'http://iamrawwarrior.com/img/element5.jpg'
+               'og:image': 'http://iamrawwarrior.com/img/share/element5.jpg'
             }
 					})
 				}, function(response){});
@@ -118,7 +118,7 @@
                'og:description': 'We refer to Social Responsibility as the idea of functional collectives, in which people thrive by sharing a narrative that ignites their individual skills to proactively engage in meaningful and purposeful service for themselves within their group.' ,
                'og:og:image:width': '1300',
                'og:image:height': '630',
-               'og:image': 'http://iamrawwarrior.com/img/element6.jpg'
+               'og:image': 'http://iamrawwarrior.com/img/share/element6.jpg'
             }
 					})
 				}, function(response){});
@@ -136,7 +136,7 @@
                'og:description': 'We refer to Continuity as the ever present, ongoing life force; a flow that exists and travels through us, like a radio signal that we are compelled to tune into, which gives purpose and meaning to our reception.' ,
                'og:og:image:width': '1300',
                'og:image:height': '630',
-               'og:image': 'http://iamrawwarrior.com/img/element7.jpg'
+               'og:image': 'http://iamrawwarrior.com/img/share/element7.jpg'
             }
 					})
 				}, function(response){});
