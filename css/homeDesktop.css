@@ -350,7 +350,7 @@ span.izq{
   height: 60px;
   width: 100px;
   opacity: 0;
-  z-index: 8000;
+  z-index: 5100;
   -webkit-transition: opacity 0.5s ease-out;
   -moz-transition: opacity 0.5s ease-out;
   -ms-transition: opacity 0.5s ease-out;
@@ -363,7 +363,7 @@ span.izq{
   width: 100px;
   height: 100%;
   cursor: pointer;
-  z-index: 9000;
+  z-index: 5000;
 
   display: -webkit-box;
   display: -ms-flexbox;
@@ -373,10 +373,12 @@ span.izq{
   -webkit-flex-direction:row;
   justify-content: center;
   -webkit-justify-content: center;
+
 }
 #instruction>a>img{
   height: 20px;
   margin-right: 10px;
+
 }
 
 #instruction>a>p{

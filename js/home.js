@@ -531,10 +531,10 @@ function renderMesh(){
 }
 
 function animateHome(){
-  instruction.style.opacity = "1";
   switchElementsW.style.opacity = "1";
   navDom.style.opacity = "1";
   footerDom.style.opacity = "1";
+    instruction.style.opacity = "1";
   var arr = [0, 1, 2, 3, 4, 5, 6];
   arr = shuffle(arr);
   var newArr = arr;

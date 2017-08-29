@@ -9,6 +9,8 @@ endpoint = 'http://www.vimeo.com/api/oembed.json',
 callback = 'embedVideo',
 videoUrl,
 allUrl,
+loading = _('loading'),
+percentage = _('percentage'),
 suscribe = _('suscribe'),
 titCos = _('titCos'),
 menuBo = _('menuBo'),
@@ -39,6 +41,7 @@ if(checkMobileIndex){
     setFooterHoverMobile();
     diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
     backToInner.setAttribute('onclick', 'diveDeepFun(2)');
+    loadingPercentage();
   }
 } else{
   window.onload = function(){
@@ -47,8 +50,29 @@ if(checkMobileIndex){
     loadInfoJson();
     diveDeep.setAttribute('onclick', 'diveDeepFun(3)');
     backToInner.setAttribute('onclick', 'diveDeepFun(4)');
+    loadingPercentage();
   }
 }
+
+
+var countPercentage = 1;
+var percentageComplete = false;
+function loadingPercentage(){
+  var countSet = setInterval(function(){
+    countPercentage++;
+    percentage.innerHTML = countPercentage + '%';
+    if(countPercentage>99){
+      countPercentage = 100;
+      stopSet();
+      percentageComplete = true;
+    }
+  },300);
+
+  function stopSet(){
+    clearInterval(myVar);
+  }
+}
+
 
 function loadInfoJson(){
   var req;
@@ -219,7 +243,7 @@ function embedVideo(video) {
 }
 
 function vimeoLoad(){
-  //console.log("Vimeo is loaded");
+  loading.style.display = "none";
 }
 
 function prevDup(){
