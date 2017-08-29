@@ -11,6 +11,8 @@ videoUrl,
 allUrl,
 loading = _('loading'),
 percentage = _('percentage'),
+arrowLeftDesk = _('arrowLeftDesk'),
+arrowRightDesk = _('arrowRightDesk'),
 suscribe = _('suscribe'),
 titCos = _('titCos'),
 menuBo = _('menuBo'),
@@ -22,6 +24,7 @@ videoInfoContainer = _('videoInfoContainer'),
 imgExercises = _('imgExercises'),
 imgComment = _('imgComment'),
 inner = _('inner'),
+bulletInterface = __('bulletInterface')[0],
 subInner = _('subInner'),
 backToInner = _('backToInner'),
 textCosmic = _('textCosmic'),
@@ -35,10 +38,24 @@ navDom.style.opacity = "1";
 footerDom.style.opacity = "1";
 
 if(checkMobileIndex){
-  console.log("Mobile cosmic");
   window.onload = function(){
+    arrowRightDesk.style.display = "none";
+    arrowLeftDesk.style.display = "none";
+    footerDom.style.display = "none";
+    bulletInterface.style.width = "100%";
+    bulletInterface.style.margin = "-10px auto";
+    infoBtnW.style.left = "calc(50vw - 15px)";
+    infoBtnW.style.bottom = "-5px";
+    //info
+    widthInfo = 100;
+    infoBtnW.style.display = "block";
+    main.style.left = "0";
+    videoInfoContainer.style.width = widthInfo + "vw";
+    videoInfoContainer.style.left = -widthInfo + "%";
+    
     setInnerMenuMobile();
     setFooterHoverMobile();
+    loadInfoJson();
     diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
     backToInner.setAttribute('onclick', 'diveDeepFun(2)');
     loadingPercentage();
@@ -127,7 +144,11 @@ function sliderCosmic(b, i){
     btnExercises.setAttribute('href', infoCos.e[i].exercises);
     btnDisqus.setAttribute('onclick', infoCos.e[i].disqus);
     videoUrl = infoCos.e[i].url;
-    allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
+    if(checkMobileIndex){
+      allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=580' + '&color=f6eeda';
+    } else {
+      allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
+    }
     loadVimeo(allUrl);
   } else {
     shareFbCos[i].style.display = "block";
@@ -136,7 +157,11 @@ function sliderCosmic(b, i){
     btnExercises.setAttribute('href', infoCos.e[i].exercises);
     btnDisqus.setAttribute('onclick', infoCos.e[i].disqus);
     videoUrl = infoCos.e[i].url;
-    allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
+    if(checkMobileIndex){
+      allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=580' + '&color=f6eeda';
+    } else {
+      allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
+    }
     loadVimeo(allUrl);
   }
   for (var j = 0; j < bulletCosmic.length; j++) {
@@ -336,17 +361,33 @@ function showInfo(c){
     switch (c) {
     case "open":
       infoOpen = true;
+      if(checkMobileIndex){
+          widthInfo = 100;
+          infoBtnW.style.display = "none";
+          main.style.left = widthInfo + "%";
+          videoInfoContainer.style.width = widthInfo + "vw";
+          videoInfoContainer.style.left = "0";
+      } else {
       infoBtnW.style.display = "none";
       main.style.left = widthInfo + "%";
       videoInfoContainer.style.width = widthInfo + "vw";
       videoInfoContainer.style.left = "0";
+    }
     break;
     case "close":
       infoOpen = false;
+      if(checkMobileIndex){
+        widthInfo = 100;
+        infoBtnW.style.display = "block";
+        main.style.left = "0";
+        videoInfoContainer.style.width = widthInfo + "vw";
+        videoInfoContainer.style.left = -widthInfo + "%";
+      } else {
       infoBtnW.style.display = "block";
       main.style.left = "0";
       videoInfoContainer.style.width = widthInfo + "vw";
       videoInfoContainer.style.left = -widthInfo + "%";
+    }
     break;
     }
 }

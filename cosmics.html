@@ -56,7 +56,7 @@ fluo.com.mx
 <body class="bodyGradient">
   <p id="size"></p>
   <div id="sizeHome" style="z-index:-1000"></div>
-  <div id="loading">
+  <div id="loading" style="display:block">
     <p id="percentage">1%</p>
     <img src="img/logos/logo-rawwarrior-small.svg" title="Logo Raw Warrior" alt="Logo Raw Warrior for loading" width="110" height="110">
   </div>
@@ -111,14 +111,14 @@ fluo.com.mx
   </div>
     <div id="main">
       <!-- CONTENIDO -->
-      <a role="button" onclick="arrSliderCos(0)"> <img src="img/icons/arrow.svg" alt="Icon Left Arrow" width="30" height="30"> </a>
+      <a id="arrowLeftDesk" role="button" onclick="arrSliderCos(0)"> <img src="img/icons/arrow.svg" alt="Icon Left Arrow" width="30" height="30"> </a>
       <section id="videoContainer">
         <div class="loadingvimeo"><img id="logoSpinSmall" src="img/logos/logo-rawwarrior-small.svg" alt="Logo Raw Warrior Small" width="60" height="60"></div>
         <div class="loadingvimeo" id="embed"><img id="logoSpinSmall" src="img/logos/logo-rawwarrior-small.svg" alt="Logo Raw Warrior Small" width="60" height="60"></div>
       </section>
-      <a role="button" onclick="arrSliderCos(1)"> <img src="img/icons/arrow.svg" alt="Icon Right Arrow" width="30" height="30"> </a>
+      <a id="arrowRightDesk" role="button" onclick="arrSliderCos(1)"> <img src="img/icons/arrow.svg" alt="Icon Right Arrow" width="30" height="30"> </a>
 
-        <div id="interface">
+        <div id="interface" class="bulletInterface">
             <p><span id="changeNumCos">1</span>/18</p>
             <ul>
               <li class="bulletCosmic scaleUp" onclick="unBindBulletCosmic(0)"></li>

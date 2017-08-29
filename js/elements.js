@@ -149,7 +149,11 @@ window.onresize = function (){
         if(hideArrow < -20){
           sliderArrows.style.display = "none";
         } else {
-          sliderArrows.style.display = "block";
+          if(checkMobileIndex){
+              sliderArrows.style.display = "none !important";
+          } else {
+            sliderArrows.style.display = "block";
+          }
         }
       var scrollFooterFix = sizeHome.getBoundingClientRect().top;
       if(scrollFooterFix < -300){
