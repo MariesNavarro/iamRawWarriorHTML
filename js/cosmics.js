@@ -1,3 +1,8 @@
+var linkDomHomeMobile = document.createElement('LINK');
+linkDomHomeMobile.rel  = 'stylesheet';
+linkDomHomeMobile.type = 'text/css';
+linkDomHomeMobile.href = "css/homeMobile.css";
+
 var openFoot = false;
 var footerDom = document.getElementsByTagName("FOOTER")[0],
     navDom = document.getElementsByTagName("NAV")[0],
@@ -16,6 +21,7 @@ percentage = _('percentage'),
 arrowLeftDesk = _('arrowLeftDesk'),
 arrowRightDesk = _('arrowRightDesk'),
 suscribe = _('suscribe'),
+playBMobVimeo = _('playBMobVimeo'),
 titCos = _('titCos'),
 menuBo = _('menuBo'),
 videoContainer = _('videoContainer'),
@@ -40,8 +46,13 @@ menuBtn = _('menuBtn');
 navDom.style.opacity = "1";
 footerDom.style.opacity = "1";
 
+
+
 if(checkMobileIndex){
   window.onload = function(){
+    setInnerMenuMobile();
+    setFooterHoverMobile();
+    loadInfoJson();
     videoContainer.style.width = "100%";
     videoContainer.style.left = "0";
 
@@ -49,7 +60,7 @@ if(checkMobileIndex){
     arrowLeftDesk.style.display = "none";
     footerDom.style.display = "none";
     bulletInterface.style.width = "100%";
-    bulletInterface.style.margin = "-10px auto";
+    bulletInterface.style.margin = "-50px auto";
     infoBtnW.style.left = "calc(50vw - 15px)";
     infoBtnW.style.bottom = "-5px";
     //info
@@ -59,12 +70,11 @@ if(checkMobileIndex){
     videoInfoContainer.style.width = widthInfo + "vw";
     videoInfoContainer.style.left = -widthInfo + "%";
 
-    setInnerMenuMobile();
-    setFooterHoverMobile();
-    loadInfoJson();
+
     diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
     backToInner.setAttribute('onclick', 'diveDeepFun(2)');
     loadingPercentage();
+    headDom.appendChild(linkDomHomeMobile);
   }
 } else{
   window.onload = function(){
@@ -74,6 +84,44 @@ if(checkMobileIndex){
     diveDeep.setAttribute('onclick', 'diveDeepFun(3)');
     backToInner.setAttribute('onclick', 'diveDeepFun(4)');
     loadingPercentage();
+  }
+}
+
+function diveDeepFun(c){
+  switch (c) {
+  case 1:
+    subInner.style.display = "block";
+    setTimeout(function(){subInner.style.opacity = "1"; },500);
+  break;
+  case 2:
+    subInner.style.opacity = "0";
+    setTimeout(function(){ subInner.style.display = "none";},400);
+  break;
+  case 3:
+    subInner.style.right = "25px";
+    menuBtn.style.display = "none";
+    inner.style.display = "none";
+  break;
+  case 4:
+    subInner.style.right = "-225px";
+    inner.style.display = "block";
+    menuBtn.style.display = "block";
+  break;
+  }
+}
+
+function overMobile(s){
+  switch (s) {
+  case 1:
+  infoBtnW.style.display = "none";
+  inner.style.display = "block";
+  setTimeout(function(){ inner.style.opacity = "1"; },500);
+  break;
+  case 2:
+  infoBtnW.style.display = "block";
+  inner.style.opacity = "0";
+  setTimeout(function(){ inner.style.display = "none"; },700);
+  break;
   }
 }
 
@@ -126,7 +174,6 @@ document.onkeydown = function(evt) {
 };
 
 var iframeDom = document.createElement('IFRAME');
-// <iframe id="mockWebFrame" src="https://player.vimeo.com/video/229164241?api=1&autoplay=1&loop=1" width="640" height="346" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen onload="readyWeb()"></iframe>
 function sliderCosmic(b, i){
   for (var x = 0; x < shareFbCos.length; x++) {
     shareFbCos[x].style.display = "none"
@@ -151,7 +198,7 @@ function sliderCosmic(b, i){
     btnDisqus.setAttribute('onclick', infoCos.e[i].disqus);
     videoUrl = infoCos.e[i].url;
     if(checkMobileIndex){
-      allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&width=320' + '&color=f6eeda';
+      // allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&width=320' + '&color=f6eeda';
     } else {
       allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
     }
@@ -164,7 +211,7 @@ function sliderCosmic(b, i){
     btnDisqus.setAttribute('onclick', infoCos.e[i].disqus);
     videoUrl = infoCos.e[i].url;
     if(checkMobileIndex){
-      allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&width=320' + '&color=f6eeda';
+      // allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&width=320' + '&color=f6eeda';
     } else {
       allUrl = endpoint + '?url=' + encodeURIComponent(videoUrl) + '&callback=' + callback + '&width=840' + '&color=f6eeda';
     }
@@ -226,28 +273,101 @@ function detectswipe(el,func) {
   },false);
 } //detectSwipe
 
-var tapedTwice = false;
-
 detectswipe('swipeEl', swipeTransform);
 
-swipeEl.addEventListener("touchstart", tapHandler);
-function tapHandler(event) {
-    if(!tapedTwice) {
-        tapedTwice = true;
-        setTimeout( function() { tapedTwice = false; }, 300 );
-        return false;
-    }
-    event.preventDefault();
-    console.log('You tapped me Twice !!!');
- }
+//DOUBLE TAP
+// var tapedTwice = false;
+// swipeEl.addEventListener("touchstart", tapHandler);
+// function tapHandler(event) {
+//     if(!tapedTwice) {
+//         tapedTwice = true;
+//         setTimeout( function() { tapedTwice = false; }, 300 );
+//         return false;
+//     }
+//     event.preventDefault();
+//     console.log('You tapped me Twice !!!');
+//  }
 
+var countSwipe = 0;
 function swipeTransform(el,d) {
   if(d == "l") {
-      console.log("Swipe lado izquierdo");
+      sliderCosmic(countSwipe,countSwipe);
+      sliderMobileVimeo(countSwipe);
+      countSwipe++;
+      if(countSwipe>=18) countSwipe = 0;
+      console.log("Valor de count" + countSwipe);
   } //l
   if(d == "r"){
-    console.log("Swipe lado derecho");
+    sliderCosmic(countSwipe,countSwipe);
+    sliderMobileVimeo(countSwipe)
+    countSwipe--;
+    if(countSwipe<=0) countSwipe = 17;
+    console.log("Valor de count" + countSwipe);
   } //r
+}
+
+//playBMobVimeo
+function sliderMobileVimeo(c){
+  switch (c) {
+  case 0:
+    playBMobVimeo.href = "http://www.vimeo.com/226627921";
+    swipeEl.style.backgroundImage = "url('img/sliderCosmic/0.jpg')";
+  break;
+  case 1:
+    playBMobVimeo.href = "http://vimeo.com/226629389";
+    swipeEl.style.backgroundImage = "url('img/sliderCosmic/1.jpg')";
+  break;
+  case 2:
+    playBMobVimeo.href = "http://www.vimeo.com/226631176";
+    swipeEl.style.backgroundImage = "url('img/sliderCosmic/2.jpg')";
+  break;
+  case 3:
+    playBMobVimeo.href = "http://www.vimeo.com/226632661";
+    swipeEl.style.backgroundImage = "url('img/sliderCosmic/3.jpg')";
+  break;
+  case 4:
+    swipeEl.style.backgroundImage = "url('img/sliderCosmic/4.jpg')";
+  break;
+  case 5:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/5.jpg')";
+  break;
+  case 6:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/6.jpg')";
+  break;
+  case 7:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/7.jpg')";
+  break;
+  case 8:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/8.jpg')";
+  break;
+  case 9:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/9.jpg')";
+  break;
+  case 10:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/10.jpg')";
+  break;
+  case 11:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/11.jpg')";
+  break;
+  case 12:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/12.jpg')";
+  break;
+  case 13:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/13.jpg')";
+  break;
+  case 14:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/14.jpg')";
+  break;
+  case 15:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/15.jpg')";
+  break;
+  case 16:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/16.jpg')";
+  break;
+  case 17:
+  swipeEl.style.backgroundImage = "url('img/sliderCosmic/17.jpg')";
+  break;
+  }
 }
 
 function unBindBulletCosmic(c){
@@ -351,28 +471,7 @@ function prevDup(){
   if(dup) headDom.removeChild(dup);
 }
 
-function diveDeepFun(c){
-  switch (c) {
-  case 1:
-    subInner.style.display = "block";
-    setTimeout(function(){subInner.style.opacity = "1"; },500);
-  break;
-  case 2:
-    subInner.style.opacity = "0";
-    setTimeout(function(){ subInner.style.display = "none";},400);
-  break;
-  case 3:
-    subInner.style.right = "25px";
-    menuBtn.style.display = "none";
-    inner.style.display = "none";
-  break;
-  case 4:
-    subInner.style.right = "-225px";
-    inner.style.display = "block";
-    menuBtn.style.display = "block";
-  break;
-  }
-}
+
 
 
 

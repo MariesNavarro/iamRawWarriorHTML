@@ -8,7 +8,7 @@ nav> #inner{
   width: 100vw;
   height: 100vh;
   left: 0;
-  top: 0;
+  top: -30px;
   background: rgba(14,38,53,1);
   background: -moz-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
   background: -webkit-radial-gradient(center, ellipse cover, rgba(14,38,53,1) 0%, rgba(14,38,53,1) 10%, rgba(0,0,0,1) 100%);
@@ -21,7 +21,7 @@ nav> #inner{
   -moz-transition: opacity 0.7s ease-out;
   -ms-transition: opacity 0.7s ease-out;
   -o-transition: opacity 0.7s ease-out;
-  transition: opacity 0.7s ease-out;*/
+  transition: opacity 0.7s ease-out;
 }
 
 nav> #inner>ul{

@@ -56,7 +56,7 @@ fluo.com.mx
 <body class="bodyGradient">
   <p id="size"></p>
   <div id="sizeHome" style="z-index:-1000"></div>
-  <div id="loading" style="display:block">
+  <div id="loading" style="display:none">
     <p id="percentage">1%</p>
     <img src="img/logos/logo-rawwarrior-small.svg" title="Logo Raw Warrior" alt="Logo Raw Warrior for loading" width="110" height="110">
     <span>Please wait this may <br> take a few seconds</span>
@@ -77,8 +77,8 @@ fluo.com.mx
         <li><a id="diveDeep" role="button">Dive deeper <span></span></a></li>
         <li><a href="#">Now what? <span></span></a></li>
         <li>
-          <a href="https://www.facebook.com/Raw-Warrior-363687904006372/" target="_blank"> <img class="mediaBtn" src="img/icons/facebook.svg" alt="Icon button for facebook" height="25"></a>
-          <a href="https://www.instagram.com/iamrawwarrior/" target="_blank"> <img class="mediaBtn" src="img/icons/instagram.svg" alt="Icon button for instagram" height="25"></a>
+          <a href="https://www.facebook.com/Raw-Warrior-363687904006372/" target="_blank"> <img class="mediaBtn" src="img/icons/facebook.svg" alt="Icon button for facebook" height="35"></a>
+          <a href="https://www.instagram.com/iamrawwarrior/" target="_blank"> <img class="mediaBtn" src="img/icons/instagram.svg" alt="Icon button for instagram" height="35"></a>
         </li>
       </ul>
     </div>
@@ -117,8 +117,11 @@ fluo.com.mx
         <div class="loadingvimeo"><img id="logoSpinSmall" src="img/logos/logo-rawwarrior-small.svg" alt="Logo Raw Warrior Small" width="60" height="60"></div>
         <div class="loadingvimeo" id="embed"><img id="logoSpinSmall" src="img/logos/logo-rawwarrior-small.svg" alt="Logo Raw Warrior Small" width="60" height="60"></div>
         <div id="swipeCosmic">
-          <div id="swipeEl"></div>
-          <a id="mobilePlayBtn" role="button">Play the video</a>
+          <div id="swipeEl">
+            <a id="playBMobVimeo" href="http://www.vimeo.com/226627921" target="_blank" onmouseover="switchPlayIcon('over')" onmouseout="switchPlayIcon('out')">
+              <img src="img/icons/play_hover.svg" alt="Button Play" width="60">
+            </a>
+          </div>
         </div>
       </section>
       <a id="arrowRightDesk" role="button" onclick="arrSliderCos(1)"> <img src="img/icons/arrow.svg" alt="Icon Right Arrow" width="30" height="30"> </a>
@@ -404,6 +407,6 @@ fluo.com.mx
   </script>
   <script src="js/cosmics.js" charset="utf-8" async></script>
   <script src="js/build/pixi.min.js" charset="utf-8"></script>
-  <!-- <script src="js/cosmicsShare.js" charset="utf-8" async></script> -->
+  <script src="js/cosmicsShare.js" charset="utf-8" async></script>
 </body>
 </html>

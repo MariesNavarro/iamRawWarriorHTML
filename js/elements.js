@@ -50,17 +50,20 @@ window.onresize = function (){
 }
     if(checkMobileIndex){
     window.onload = function(){
-        window.addEventListener("scroll", changeColorDesktop, false);
-        outer.style.top = "-30px";
+      outer.style.top = "-30px";
         setInnerMenuMobile();
         setFooterHoverMobile();
+        diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
+        backToInner.setAttribute('onclick', 'diveDeepFun(2)');
+        window.addEventListener("scroll", changeColorDesktop, false);
+
+
         sequencesDesktop();
         detectswipe('eW', swipeTransform);
         initInfoSlider();
         headDom.appendChild(linkDomDesktop);
         headDom.appendChild(linkDomHomeMobile);
-        diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
-        backToInner.setAttribute('onclick', 'diveDeepFun(2)');
+
 
       setTimeout(function(){
         if(urlValue == 0){
