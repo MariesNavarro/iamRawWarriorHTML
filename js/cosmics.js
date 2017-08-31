@@ -24,6 +24,7 @@ suscribe = _('suscribe'),
 playBMobVimeo = _('playBMobVimeo'),
 titCos = _('titCos'),
 menuBo = _('menuBo'),
+instructionMobile = _('instructionMobile'),
 videoContainer = _('videoContainer'),
 changeNumCos = _('changeNumCos'),
 imgBtnInfo = _('imgBtnInfo'),
@@ -51,6 +52,7 @@ footerDom.style.opacity = "1";
 
 if(checkMobileIndex){
   window.onload = function(){
+    instructionMobile.style.display = "block";
     //Mobile disqus wrap
     for (var i = 0; i < disqus.length; i++) {
       disqus[i].classList.remove('hideDisqus');
@@ -810,4 +812,9 @@ function frameLoad(){
       loading.style.display = "none";
     },1000);
   }
+}
+
+
+function instructionsNone(){
+  instructionMobile.style.display = "none";
 }

@@ -434,3 +434,52 @@
 #vimeoMobileWrap>div>iframe{
   width: 100%;
 }
+
+
+#instructionMobile{
+  position: fixed;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background: #f6eed9;
+}
+#instructionMobile>ul{
+  position: absolute;
+  width: 80vw;
+  height: 80vh;
+  top: 5vh;
+  left: 10vw;
+}
+#instructionMobile>ul>li{
+  width: 100%;
+  height: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content:center;
+  -webkit-justify-content:center;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#instructionMobile>ul>li>p{
+  display: block;
+  width: 70%;
+}
+#instructionMobile>ul>li>a{
+  margin-top: 10px;
+  border: 2px solid #0e2635;
+  padding: 15px 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#instructionMobile>ul>li>a:hover{
+  background: #0e2635;
+  color: #f6eed9;
+}
+#instructionMobile>ul>li>a, #instructionMobile>ul>li>p{
+  color: #0e2635;
+}

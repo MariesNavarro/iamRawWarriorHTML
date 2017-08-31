@@ -23,6 +23,7 @@ var footerDom = document.getElementsByTagName("FOOTER")[0],
     gifInfo = __('gifInfo'),
     sizeHome = _('sizeHome'),
     menuBtn = _('menuBtn'),
+    instructionMobile = _('instructionMobile'),
     sliderArrows = _('sliderArrows');
     var linkDomMobile  = document.createElement('LINK');
     var linkDomDesktop = document.createElement('LINK');
@@ -50,6 +51,7 @@ window.onresize = function (){
 }
     if(checkMobileIndex){
     window.onload = function(){
+      instructionMobile.style.display = "block";
       outer.style.top = "-30px";
         setInnerMenuMobile();
         setFooterHoverMobile();
@@ -629,4 +631,9 @@ function openDisqusR(n, state){
       commentsDisqus[n].style.display = "none";
     },200);
   }
+}
+
+
+function instructionsNone(){
+  instructionMobile.style.display = "none";
 }
