@@ -491,14 +491,130 @@
   position: absolute;
   width: 80vw;
   height: 70vh;
-  background: green;
   top: 10vw;
   left: 10vw;
 }
 #instructionMobile>ul>li:first-child{
   width: 100%;
-  height: 70%;
-  background: red;
+  height: 60%;
+}
+#instructionMobile>ul>li>p{
+  width: 200px;
+  text-align: center;
+  margin: 10px auto;
+  color: #0e2635;
+
+}
+#wrapInstructionsMobile{
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 140px;
+}
+#wrapInstructionsMobile>li{
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  height: 48%;
+}
+#wrapInstructionsMobile>li:first-child, #wrapInstructionsMobile>li:nth-child(4) {
+  margin-left: 4%;
+}
+/* elementos */
+#flechaswipeMob{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+#manoswipeMob{
+  position: absolute;
+  left: -15px;
+  height: 100%;
+  -webkit-animation: swipeLeft 2s infinite;
+  -moz-animation: swipeLeft 2s infinite;
+  -ms-animation: swipeLeft 2s infinite;
+  -o-animation: swipeLeft 2s infinite;
+  animation: swipeLeft 2s infinite;
+
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+@-webkit-keyframes swipeLeft {
+  0%{ left:-15px; }
+  50%{ left:35px; }
+  100%{ left:-15px; }
+}
+@-moz-keyframes swipeLeft {
+  0%{ left:-15px; }
+  50%{ left:35px; }
+  100%{ left:-15px; }
+}
+@-ms-keyframes swipeLeft {
+  0%{ left:-15px; }
+  50%{ left:35px; }
+  100%{ left:-15px; }
+}
+@-o-keyframes swipeLeft {
+  0%{ left:-15px; }
+  50%{ left:35px; }
+  100%{ left:-15px; }
+}
+@keyframes swipeLeft {
+  0%{ left:-15px; }
+  50%{ left:35px; }
+  100%{ left:-15px; }
+}
+
+.bulletsswipeMobWrap>div{
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.bulletsswipeMobWrap>div>span{
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0e2635;
+}
+#swipeAni1{
+  -webkit-animation: swipeBulletM 2s infinite;
+  -moz-animation: swipeBulletM 2s infinite;
+  -ms-animation: swipeBulletM 2s infinite;
+  -o-animation: swipeBulletM 2s infinite;
+  animation: swipeBulletM 2s infinite;
+}
+@keyframes swipeBulletM {
+  0%{ transform: scale(1, 1);}
+  50%{ transform: scale(2, 2);}
+}
+#swipeAni6{
+  -webkit-animation: swipeBulletM2 2s infinite;
+  -moz-animation: swipeBulletM2 2s infinite;
+  -ms-animation: swipeBulletM2 2s infinite;
+  -o-animation: swipeBulletM2 2s infinite;
+  animation: swipeBulletM2 2s infinite;
+
+  transform: scale(2, 2);
+}
+@keyframes swipeBulletM2 {
+  0%{ transform: scale(2, 2);}
+  50%{  transform: scale(1, 1);}
 }
 #instructionMobile>ul>li:nth-child(2){
   width: 100%;
