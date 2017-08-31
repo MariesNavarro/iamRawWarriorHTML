@@ -51,11 +51,15 @@ footerDom.style.opacity = "1";
 
 if(checkMobileIndex){
   window.onload = function(){
+    //Mobile disqus wrap
+    for (var i = 0; i < disqus.length; i++) {
+      disqus[i].classList.remove('hideDisqus');
+      disqus[i].classList.add('disqusMobile');
+      disqus[i].classList.add('hideDisqusMobile');
+    }
     setInnerMenuMobile();
     setFooterHoverMobile();
     loadInfoJson();
-
-
     videoContainer.style.width = "100%";
     videoContainer.style.left = "0";
     arrowRightDesk.style.display = "none";
@@ -89,6 +93,8 @@ if(checkMobileIndex){
     loadingPercentage();
   }
 }
+
+
 
 function diveDeepFun(c){
   switch (c) {
@@ -276,7 +282,7 @@ function detectswipe(el,func) {
   },false);
 } //detectSwipe
 
-detectswipe('swipeEl', swipeTransform);
+detectswipe('interface', swipeTransform);
 
 //DOUBLE TAP
 // var tapedTwice = false;
@@ -313,62 +319,80 @@ function swipeTransform(el,d) {
 function sliderMobileVimeo(c){
   switch (c) {
   case 0:
-    playBMobVimeo.href = "http://www.vimeo.com/226627921";
-    swipeEl.style.backgroundImage = "url('img/sliderCosmic/0.jpg')";
+    vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/226627921?api=1&player_id=cosmicv');
+    // playBMobVimeo.href = "http://www.vimeo.com/226627921";
+    // swipeEl.style.backgroundImage = "url('img/sliderCosmic/0.jpg')";
   break;
   case 1:
-    playBMobVimeo.href = "http://vimeo.com/226629389";
-    swipeEl.style.backgroundImage = "url('img/sliderCosmic/1.jpg')";
+    vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/226629389?api=1&player_id=cosmicv');
+    // playBMobVimeo.href = "http://vimeo.com/226629389";
+    // swipeEl.style.backgroundImage = "url('img/sliderCosmic/1.jpg')";
   break;
   case 2:
-    playBMobVimeo.href = "http://www.vimeo.com/226631176";
-    swipeEl.style.backgroundImage = "url('img/sliderCosmic/2.jpg')";
+    vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/226631176?api=1&player_id=cosmicv');
+    // playBMobVimeo.href = "http://www.vimeo.com/226631176";
+    // swipeEl.style.backgroundImage = "url('img/sliderCosmic/2.jpg')";
   break;
   case 3:
-    playBMobVimeo.href = "http://www.vimeo.com/226632661";
-    swipeEl.style.backgroundImage = "url('img/sliderCosmic/3.jpg')";
+    vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/226632661?api=1&player_id=cosmicv');
+    // playBMobVimeo.href = "http://www.vimeo.com/226632661";
+    // swipeEl.style.backgroundImage = "url('img/sliderCosmic/3.jpg')";
   break;
   case 4:
-    swipeEl.style.backgroundImage = "url('img/sliderCosmic/4.jpg')";
+    vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/226634119?api=1&player_id=cosmicv');
+    // swipeEl.style.backgroundImage = "url('img/sliderCosmic/4.jpg')";
   break;
   case 5:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/5.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/226645164?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/5.jpg')";
   break;
   case 6:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/6.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/226635739?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/6.jpg')";
   break;
   case 7:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/7.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/226637359?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/7.jpg')";
   break;
   case 8:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/8.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/226639104?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/8.jpg')";
   break;
   case 9:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/9.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/227661329?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/9.jpg')";
   break;
   case 10:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/10.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/226629389?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/10.jpg')";
   break;
   case 11:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/11.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/226642650?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/11.jpg')";
   break;
   case 12:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/12.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/227663079?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/12.jpg')";
   break;
   case 13:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/13.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/227664801?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/13.jpg')";
   break;
   case 14:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/14.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/227666623?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/14.jpg')";
   break;
   case 15:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/15.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/227670135?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/15.jpg')";
   break;
   case 16:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/16.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/227666622?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/16.jpg')";
   break;
   case 17:
-  swipeEl.style.backgroundImage = "url('img/sliderCosmic/17.jpg')";
+  vimeoFrame.setAttribute('src', 'https://player.vimeo.com/video/227672132?api=1&player_id=cosmicv');
+  // swipeEl.style.backgroundImage = "url('img/sliderCosmic/17.jpg')";
   break;
   }
 }
@@ -524,6 +548,13 @@ window.onresize = function(){
       showInfo("close");
     }
   }
+  if(checkMobileIndex){
+     newWidthVimeo = vimeoWrap.offsetWidth;
+     vimeoFrame.setAttribute('width', newWidthVimeo);
+     ratioVimeo = vimeoFrame.getAttribute('data-ratio');
+     heightFrameWeb  = ratioVimeo * newWidthVimeo;
+     vimeoFrame.setAttribute('height', heightFrameWeb);
+  }
 }
 
 
@@ -665,13 +696,21 @@ objectDom.type = "text/html";
 
 /* Disqus */
 function disqusCosmics(i, state){
-  if(state === true){
-    disqus[i].classList.remove('hideDisqus');
-    disqus[i].classList.add('showDisqus');
-  } else {
-    disqus[i].classList.remove('showDisqus');
-    disqus[i].classList.add('hideDisqus');
-  }
+    if(state === true){
+      disqus[i].classList.remove('hideDisqus');
+      disqus[i].classList.add('showDisqus');
+      if(checkMobileIndex){
+        disqus[i].classList.remove('hideDisqusMobile');
+        disqus[i].classList.add('showDisqusMobile');
+      }
+    } else {
+      disqus[i].classList.remove('showDisqus');
+      disqus[i].classList.add('hideDisqus');
+      if(checkMobileIndex){
+        disqus[i].classList.remove('showDisqusMobile');
+        disqus[i].classList.add('hideDisqusMobile');
+      }
+    }
   switch (i) {
     case 0:
       objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
@@ -745,5 +784,30 @@ function disqusCosmics(i, state){
       objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
       disqus[i].appendChild(objectDom);
     break;
+  }
+}
+
+
+var vimeoWrap = _('vimeoWrap'),
+ vimeoFrame = _('vimeoFrame'),
+ heightFrameWeb;
+var newWidthVimeo = vimeoWrap.offsetWidth,
+    wOriginVimeo = vimeoFrame.getAttribute('width'),
+    hOriginVimeo = vimeoFrame.getAttribute('height');
+vimeoFrame.setAttribute('data-ratio', hOriginVimeo / wOriginVimeo);
+var ratioVimeo = vimeoFrame.getAttribute('data-ratio');
+
+setTimeout(function(){
+  vimeoFrame.setAttribute('width', newWidthVimeo);
+  heightFrameWeb  = ratioVimeo * newWidthVimeo;
+  vimeoFrame.setAttribute('height', heightFrameWeb);
+},1000);
+
+
+function frameLoad(){
+  if(checkMobileIndex){
+    setTimeout(function(){
+      loading.style.display = "none";
+    },1000);
   }
 }

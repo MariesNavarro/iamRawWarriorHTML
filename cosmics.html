@@ -56,7 +56,7 @@ fluo.com.mx
 <body class="bodyGradient">
   <p id="size"></p>
   <div id="sizeHome" style="z-index:-1000"></div>
-  <div id="loading" style="display:none">
+  <div id="loading" style="display:block">
     <p id="percentage">1%</p>
     <img src="img/logos/logo-rawwarrior-small.svg" title="Logo Raw Warrior" alt="Logo Raw Warrior for loading" width="110" height="110">
     <span>Please wait this may <br> take a few seconds</span>
@@ -118,8 +118,12 @@ fluo.com.mx
         <div class="loadingvimeo" id="embed"><img id="logoSpinSmall" src="img/logos/logo-rawwarrior-small.svg" alt="Logo Raw Warrior Small" width="60" height="60"></div>
         <div id="swipeCosmic">
           <div id="swipeEl">
-            <a id="playBMobVimeo" href="http://www.vimeo.com/226627921" target="_blank" onmouseover="switchPlayIcon('over')" onmouseout="switchPlayIcon('out')">
-              <img src="img/icons/play_hover.svg" alt="Button Play" width="60">
+            <!-- <a id="playBMobVimeo" href="http://www.vimeo.com/226627921" target="_blank" onmouseover="switchPlayIcon('over')" onmouseout="switchPlayIcon('out')"> -->
+              <!-- <img src="img/icons/play_hover.svg" alt="Button Play" width="60"> -->
+              <!-- <iframe id="showReelFrame" src="https://player.vimeo.com/video/226627921?api=1&player_id=showReel" width="640" height="424" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+              <div id="vimeoWrap">
+                <iframe id="vimeoFrame" src="https://player.vimeo.com/video/226627921?api=1&player_id=cosmicv" width="640" height="424" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen onload="frameLoad()"></iframe>
+              </div>
             </a>
           </div>
         </div>
@@ -150,6 +154,17 @@ fluo.com.mx
             </ul>
         </div>
   </div>
+
+  <!-- mobile vimeo containers -->
+
+<!-- <section id="vimeoMobileWrap">
+  <a role="button">
+    <img src="img/icons/menuClose_b.svg" alt="Close vimeo" width="30">
+  </a>
+  <div id="vimeoWrap">
+    <iframe id="vimeoFrame" src="https://player.vimeo.com/video/226627921?api=1&player_id=showReel" width="640" height="424" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+</section> -->
 
   <section id="videoInfoContainer">
       <div>
@@ -196,7 +211,6 @@ fluo.com.mx
         </div>
       </div>
   </section>
-
   <!-- Discus Containers -->
     <!-- 1 -->
     <section class="disqus hideDisqus">
@@ -391,5 +405,18 @@ fluo.com.mx
   <script src="js/cosmics.js" charset="utf-8" async></script>
   <script src="js/build/pixi.min.js" charset="utf-8"></script>
   <script src="js/cosmicsShare.js" charset="utf-8" async></script>
+  <script>
+  window.addEventListener("orientationchange", function() {
+    if(window.orientation == 90 || window.orientation == -90){
+      console.log("Landscape");
+        bulletInterface.style.opacity = 0;
+        infoBtnW.style.opacity = 0;
+    } else {
+      console.log("portrait");
+      bulletInterface.style.opacity = 1;
+      infoBtnW.style.opacity = 1;
+    }
+  })
+  </script>
 </body>
 </html>
