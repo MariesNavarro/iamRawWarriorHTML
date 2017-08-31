@@ -41,6 +41,7 @@ bulletCosmic = __('bulletCosmic'),
 btnExercises = _('btnExercises'),
 shareFbCos = __('shareFbCos'),
 btnDisqus = _('btnDisqus'),
+swipeCosmic = _('swipeCosmic'),
 disqus = __('disqus'),
 menuBtn = _('menuBtn');
 navDom.style.opacity = "1";
@@ -53,9 +54,10 @@ if(checkMobileIndex){
     setInnerMenuMobile();
     setFooterHoverMobile();
     loadInfoJson();
+
+
     videoContainer.style.width = "100%";
     videoContainer.style.left = "0";
-
     arrowRightDesk.style.display = "none";
     arrowLeftDesk.style.display = "none";
     footerDom.style.display = "none";
@@ -78,6 +80,7 @@ if(checkMobileIndex){
   }
 } else{
   window.onload = function(){
+    swipeCosmic.style.display = "none";
     setInnerMenu();
     setFooterHover();
     loadInfoJson();
@@ -649,6 +652,17 @@ function showSuscribe(c){
 
 
 
+var scriptDisqus = document.createElement('SCRIPT');
+    scriptDisqus.id  = 'dsq-count-scr';
+    scriptDisqus.defer = 'defer';
+
+var objectDom = document.createElement('OBJECT');
+objectDom.type = "text/html";
+
+
+
+// commentsDisqus[n].appendChild(objectDom);
+
 /* Disqus */
 function disqusCosmics(i, state){
   if(state === true){
@@ -657,5 +671,79 @@ function disqusCosmics(i, state){
   } else {
     disqus[i].classList.remove('showDisqus');
     disqus[i].classList.add('hideDisqus');
+  }
+  switch (i) {
+    case 0:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 1:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 2:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 3:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 4:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 5:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 6:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 7:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 8:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 9:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 10:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 11:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 12:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 13:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 14:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 15:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 16:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
+    case 17:
+      objectDom.setAttribute('data', 'disqus/cthread'+ i +'.html');
+      disqus[i].appendChild(objectDom);
+    break;
   }
 }
