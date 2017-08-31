@@ -54,15 +54,12 @@ fluo.com.mx
   <link rel="stylesheet" href="css/cosmicsDesktop.css">
 </head>
 <body class="bodyGradient">
-  <div id="instructionMobile" style="display:none">
+  <div id="instructionMobile">
     <ul>
-      <li>
-        <img src="img/icons/swipe.svg" alt="Instruction swipe" width="40">
-        <p>Swipe over the image to change the element</p>
-      </li>
-      <li>
-        <img src="img/icons/swipe.svg" alt="Instruction touch" width="40">
-        <p>You can touch a bullet to select between elements</p>
+      <li style="height:60%">
+        <img src="img/icons/swipeCosmic.svg" alt="Instruction touch" width="90">
+        <br>
+        <p>You can swipe on the bullets to change between videos</p>
       </li>
       <li>
         <a role="buton" onclick="instructionsNone()">Got it</a>
@@ -99,7 +96,7 @@ fluo.com.mx
     </div>
     <div id="subInner">
       <ul>
-        <li><a href="https://wearerawwarriors.com" target="_blank">We Are<span></span> </a></li>
+        <li><a href="https://wearerawwarriors.com" target="_blank">We Are Raw<span></span> </a></li>
         <li><a href="https://teachable.com" target="_blank">Teachable <span></span> </a></li>
         <li><a href="http://www.creativevisions.org" target="_blank">Creative visions <span></span> </a></li>
         <li><a href="http://www.rock-your-world.org" target="_blank">Rock your world <span></span> </a></li>
@@ -107,23 +104,33 @@ fluo.com.mx
       </ul>
     </div>
   </nav>
-  <div id="suscribe">
-    <a role="button" onclick="showSuscribe(2)">
-      <img src="img/icons/menuClose_b.svg" alt="" width="25">
-    </a>
-    <form action="https://claudiaflores.createsend.com/t/j/s/zjyulj/" method="post" id="subForm">
-      <p>
-        <label for="fieldName">Name</label><br />
-        <input id="fieldName" name="cm-name" type="text" />
-      </p>
-      <p>
-        <label for="fieldEmail">Email</label><br />
-        <input id="fieldEmail" name="cm-zjyulj-zjyulj" type="email" required />
-      </p>
-      <p>
-        <button id="suscribeBtn" type="submit">Subscribe</button>
-      </p>
-    </form>
+  <div id="suscribeW">
+    <div id="suscribeExit" onclick="showSuscribe(2)"></div>
+    <div id="suscribe">
+      <a role="button" onclick="showSuscribe(2)">
+        <img src="img/icons/menuClose_b.svg" alt="" width="25">
+      </a>
+      <h3 style="color:#0e2635">Get our newsletter</h3>
+      <br>
+      <p style="color:#0e2635">
+        Want the latest of our content?
+        Simply add your name and mail below.
+        A confirmation email will be sent to you!
+    </p>
+      <form action="https://claudiaflores.createsend.com/t/j/s/zjyulj/" method="post" id="subForm">
+        <p>
+          <label for="fieldName">Name</label><br />
+          <input id="fieldName" name="cm-name" type="text" />
+        </p>
+        <p>
+          <label for="fieldEmail">Email</label><br />
+          <input id="fieldEmail" name="cm-zjyulj-zjyulj" type="email" required />
+        </p>
+        <p>
+          <button id="suscribeBtn" type="submit">Subscribe</button>
+        </p>
+      </form>
+    </div>
   </div>
     <div id="main">
       <!-- CONTENIDO -->
@@ -186,13 +193,15 @@ fluo.com.mx
         <a id="closeBtnInfo" role="button" onclick="showInfo('close')"> <img src="img/icons/menuClose_b.svg" alt="Icon close info" width="25" height="25"> </a>
         <h1 id="titCos">Cosmic 1</h1>
         <p id="textCosmic"></p>
+
+
         <div id="moreW">
-              <a id="btnExercises" href="" role="button" onmouseover="overBtn('overEx')" onmouseout="overBtn('outEx')">
+              <!-- <a id="btnExercises" href="" role="button" onmouseover="overBtn('overEx')" onmouseout="overBtn('outEx')">
                 <svg class="svgView" viewBox="0 0 204 83"> <path class="frameBorder transitionClass" fill="none" stroke="#0e2635" stroke-width="2" stroke-miterlimit="10" d="M2,3.1h200.9V76H2V3.1z" style="stroke-dasharray: 547.6, 547.6; stroke-dashoffset: 0;"></path></svg>
                 <span>
                   <img id="imgExercises" src="img/icons/exercises.svg" alt="Exercises">
                 </span>
-              </a>
+              </a> -->
               <a id="btnDisqus"role="button" onmouseover="overBtn('overCm')" onmouseout="overBtn('outCm')" style="cursor:pointer">
                 <svg class="svgView" viewBox="0 0 204 83"> <path class="frameBorder transitionClass" fill="none" stroke="#0e2635" stroke-width="2" stroke-miterlimit="10" d="M2,3.1h200.9V76H2V3.1z" style="stroke-dasharray: 547.6, 547.6; stroke-dashoffset: 0;"></path></svg>
                 <span>
@@ -202,7 +211,7 @@ fluo.com.mx
         </div>
 
         <div id="shareW">
-          <h4>Share</h4>
+          <h4>Spread the word</h4>
           <div>
             <a id="cosmicShare1" class="shareFbCos" role="button"><img src="img/icons/facebookE.svg" alt="Icon share on facebook" width="100" height="40" onmouseover="changeIcon('over', this)" onmouseout="changeIcon('out', this)"></a>
             <a id="cosmicShare2" class="shareFbCos" role="button"><img src="img/icons/facebookE.svg" alt="Icon share on facebook" width="100" height="40" onmouseover="changeIcon('over', this)" onmouseout="changeIcon('out', this)"></a>
@@ -223,6 +232,9 @@ fluo.com.mx
             <a id="cosmicShare17" class="shareFbCos" role="button"><img src="img/icons/facebookE.svg" alt="Icon share on facebook" width="100" height="40" onmouseover="changeIcon('over', this)" onmouseout="changeIcon('out', this)"></a>
             <a id="cosmicShare18" class="shareFbCos" role="button"><img src="img/icons/facebookE.svg" alt="Icon share on facebook" width="100" height="40" onmouseover="changeIcon('over', this)" onmouseout="changeIcon('out', this)"></a>
           </div>
+          <span id ="mailingW">
+            <a id ="mailing" role="button"><img src="img/icons/twitterE.svg" alt="Icon subscribe to the mailing list" width="100" height="40" onmouseover="changeIcon('overT', this)" onmouseout="changeIcon('outT', this)"></a>
+          </span>
         </div>
       </div>
   </section>

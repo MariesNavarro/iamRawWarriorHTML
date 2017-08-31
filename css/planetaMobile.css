@@ -393,8 +393,8 @@ display: none;
 	display: -webkit-flex;
 	display: flex;
 
-  flex-direction: row;
-	-webkit-flex-direction:row;
+  flex-direction: column !important;
+	-webkit-flex-direction:column !important;
   align-items: center;
   -webkit-align-items: center;
   justify-content: space-around;

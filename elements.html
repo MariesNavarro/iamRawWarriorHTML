@@ -53,14 +53,43 @@ fluo.com.mx
   <link rel="stylesheet" href="css/master.css" media="all"/>
 </head>
 <body class="bodyBackDeg">
-  <div id="instructionMobile" style="display:none">
+  <div id="suscribeW">
+    <div id="suscribeExit" onclick="showSuscribe(2)"></div>
+    <div id="suscribe">
+      <a role="button" onclick="showSuscribe(2)">
+        <img src="img/icons/menuClose_b.svg" alt="" width="25">
+      </a>
+      <h3 style="color:#0e2635">Get our newsletter</h3>
+      <br>
+      <p style="color:#0e2635; font-size:1rem; text-align:center">
+        Want the latest of our content?
+        Simply add your name and mail below.
+        A confirmation email will be sent to you!
+    </p>
+      <form action="https://claudiaflores.createsend.com/t/j/s/zjyulj/" method="post" id="subForm">
+        <p>
+          <label for="fieldName">Name</label><br />
+          <input id="fieldName" name="cm-name" type="text" />
+        </p>
+        <p>
+          <label for="fieldEmail">Email</label><br />
+          <input id="fieldEmail" name="cm-zjyulj-zjyulj" type="email" required />
+        </p>
+        <p>
+          <button id="suscribeBtn" type="submit">Subscribe</button>
+        </p>
+      </form>
+    </div>
+  </div>
+  <!-- style="display:none" -->
+  <div id="instructionMobile">
     <ul>
       <li>
         <img src="img/icons/swipe.svg" alt="Instruction swipe" width="40">
         <p>Swipe over the image to change the element</p>
       </li>
       <li>
-        <img src="img/icons/swipe.svg" alt="Instruction touch" width="40">
+        <img src="img/icons/touch.svg" alt="Instruction touch" width="40">
         <p>You can touch a bullet to select between elements</p>
       </li>
       <li>
@@ -98,7 +127,7 @@ fluo.com.mx
     </div>
     <div id="subInner">
       <ul>
-        <li><a href="https://wearerawwarriors.com" target="_blank">We Are<span></span> </a></li>
+        <li><a href="https://wearerawwarriors.com" target="_blank">We Are Raw<span></span> </a></li>
         <li><a href="https://teachable.com" target="_blank">Teachable <span></span> </a></li>
         <li><a href="http://www.creativevisions.org" target="_blank">Creative visions <span></span> </a></li>
         <li><a href="http://www.rock-your-world.org" target="_blank">Rock your world <span></span> </a></li>
@@ -186,10 +215,10 @@ fluo.com.mx
       <a role="button" onclick="unBindBullet(1)">Next</a>
     </div>
     <div id="sharePost">
-      <h4>Share this post</h4>
-      <ul>
+      <h4>Spread the word</h4>
+      <ul class="shareWrap">
         <li><a id="elementShare1" role="button" target="_blank" style="cursor:pointer"><img src="img/icons/facebookE.svg" alt="Post on Facebook" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/facebookE', this)" onmouseout="changeIconShare('out', 'img/icons/facebookE', this)"></a></li>
-        <!-- <li><a href="#" target="_blank"><img src="img/icons/twitterE.svg" alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li> -->
+        <li><a role="button" onclick="showSuscribe(1)"><img src="img/icons/twitterE.svg" alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li>
       </ul>
     </div>
 
@@ -226,10 +255,10 @@ fluo.com.mx
       <a role="button" onclick="unBindBullet(2)">Next</a>
     </div>
     <div id="sharePost">
-      <h4>Share this post</h4>
-      <ul>
+      <h4>Spread the word</h4>
+      <ul class="shareWrap">
         <li><a id="elementShare2"  role="button" target="_blank"><img src="img/icons/facebookE.svg" alt="Post on Facebook" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/facebookE', this)" onmouseout="changeIconShare('out', 'img/icons/facebookE', this)"></a></li>
-        <!-- <li><a href="#" target="_blank"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li> -->
+        <li><a role="button" onclick="showSuscribe(1)"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li>
       </ul>
     </div>
 
@@ -262,10 +291,10 @@ fluo.com.mx
       <a role="button" onclick="unBindBullet(3)">Next</a>
     </div>
     <div id="sharePost">
-      <h4>Share this post</h4>
-      <ul>
+      <h4>Spread the word</h4>
+      <ul class="shareWrap">
         <li><a id="elementShare3" role="button" target="_blank"><img src="img/icons/facebookE.svg" alt="Post on Facebook" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/facebookE', this)" onmouseout="changeIconShare('out', 'img/icons/facebookE', this)"></a></li>
-        <!-- <li><a href="#" target="_blank"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li> -->
+        <li><a role="button" onclick="showSuscribe(1)"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li>
       </ul>
     </div>
 
@@ -319,17 +348,16 @@ fluo.com.mx
       <a role="button" onclick="unBindBullet(4)">Next</a>
     </div>
     <div id="sharePost">
-      <h4>Share this post</h4>
-      <ul>
+      <h4>Spread the word</h4>
+      <ul class="shareWrap">
         <li><a id="elementShare4"  role="button" target="_blank"><img src="img/icons/facebookE.svg" alt="Post on Facebook" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/facebookE', this)" onmouseout="changeIconShare('out', 'img/icons/facebookE', this)"></a></li>
-        <!-- <li><a href="#" target="_blank"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li> -->
+        <li><a role="button" onclick="showSuscribe(1)"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li>
       </ul>
     </div>
 
     <div class="commentsDisqus">
         <h3>Comments on: Human Sustainability (4/7)</h3>
         <img class="closeDisqus" src="../img/icons/menuClose_b.svg" onclick="openDisqusR(3, false)">
-
     </div>
   </section> <!-- GIF4 -->
 
@@ -371,17 +399,16 @@ fluo.com.mx
       <a role="button" onclick="unBindBullet(5)">Next</a>
     </div>
     <div id="sharePost">
-      <h4>Share this post</h4>
-      <ul>
+      <h4>Spread the word</h4>
+      <ul class="shareWrap">
         <li><a id="elementShare5"  role="button" target="_blank"><img src="img/icons/facebookE.svg" alt="Post on Facebook" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/facebookE', this)" onmouseout="changeIconShare('out', 'img/icons/facebookE', this)"></a></li>
-        <!-- <li><a href="#" target="_blank"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li> -->
+        <li><a role="button" onclick="showSuscribe(1)"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li>
       </ul>
     </div>
 
     <div class="commentsDisqus">
         <h3>Comments on: Synthesizing (5/7)</h3>
         <img class="closeDisqus" src="../img/icons/menuClose_b.svg" onclick="openDisqusR(4, false)">
-
     </div>
   </section> <!-- GIF5 -->
 
@@ -424,17 +451,16 @@ fluo.com.mx
       <a role="button" onclick="unBindBullet(6)">Next</a>
     </div>
     <div id="sharePost">
-      <h4>Share this post</h4>
-      <ul>
+      <h4>Spread the word</h4>
+      <ul class="shareWrap">
         <li><a id="elementShare6"  role="button" target="_blank"><img src="img/icons/facebookE.svg" alt="Post on Facebook" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/facebookE', this)" onmouseout="changeIconShare('out', 'img/icons/facebookE', this)"></a></li>
-        <!-- <li><a href="#" target="_blank"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li> -->
+        <li><a role="button" onclick="showSuscribe(1)"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li>
       </ul>
     </div>
 
     <div class="commentsDisqus">
         <h3>Comments on: Social Responsibility (6/7)</h3>
         <img class="closeDisqus" src="../img/icons/menuClose_b.svg" onclick="openDisqusR(5, false)">
-
     </div>
   </section> <!-- GIF6 -->
 
@@ -477,17 +503,16 @@ fluo.com.mx
       <a href="finished.html">More Videos</a>
     </div>
     <div id="sharePost">
-      <h4>Share this post</h4>
-      <ul>
+      <h4>Spread the word</h4>
+      <ul class="shareWrap">
         <li><a id="elementShare7"  role="button" target="_blank"><img src="img/icons/facebookE.svg" alt="Post on Facebook" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/facebookE', this)" onmouseout="changeIconShare('out', 'img/icons/facebookE', this)"></a></li>
-        <!-- <li><a href="#" target="_blank"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li> -->
+        <li><a role="button" onclick="showSuscribe(1)"><img src="img/icons/twitterE.svg " alt="Post on Twitter" width="100" height="40" onmouseover="changeIconShare('over', 'img/icons/twitterE', this)" onmouseout="changeIconShare('out', 'img/icons/twitterE', this)"></a></li>
       </ul>
     </div>
 
     <div class="commentsDisqus">
         <h3>Comments on: Continuity (7/7)</h3>
         <img class="closeDisqus" src="img/icons/menuClose_b.svg" onclick="openDisqusR(6, false)">
-
     </div>
 
   <footer>

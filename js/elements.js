@@ -5,7 +5,8 @@ var scriptDisqus = document.createElement('SCRIPT');
     var objectDom = document.createElement('OBJECT');
     objectDom.type = "text/html";
 
-var openFoot = false;
+var openFoot = false,
+    initCountSlider = true;
 var footerDom = document.getElementsByTagName("FOOTER")[0],
     navDom = document.getElementsByTagName("NAV")[0],
     body = document.getElementsByTagName("BODY")[0],
@@ -16,11 +17,13 @@ var footerDom = document.getElementsByTagName("FOOTER")[0],
     loading = _('loading'),
     percentage = _('percentage'),
     subInner = _('subInner'),
+    suscribe = _('suscribeW'),
     backToInner = _('backToInner'),
     bullet = __('bullet'),
     disqusTit = _('disqusTit'),
     outer = _('outer'),
     gifInfo = __('gifInfo'),
+    shareWrap = __('shareWrap'),
     sizeHome = _('sizeHome'),
     menuBtn = _('menuBtn'),
     instructionMobile = _('instructionMobile'),
@@ -52,6 +55,9 @@ window.onresize = function (){
     if(checkMobileIndex){
     window.onload = function(){
       instructionMobile.style.display = "block";
+      setTimeout(function(){
+        instructionMobile.style.opacity = "1";
+      },500)
       outer.style.top = "-30px";
         setInnerMenuMobile();
         setFooterHoverMobile();
@@ -103,6 +109,10 @@ window.onresize = function (){
         diveDeep.setAttribute('onclick', 'diveDeepFun(3)');
         backToInner.setAttribute('onclick', 'diveDeepFun(4)');
 
+        for (var i = 0; i < shareWrap.length; i++) {
+          shareWrap[i].style.width = "20vw";
+          shareWrap[i].style.marginLeft = "16%";
+        }
       setTimeout(function(){
         if(urlValue == 0){
           slider(0);
@@ -361,8 +371,12 @@ window.onresize = function (){
       }
       bullet[2].classList.add('scaleUp');
       gifInfo[2].classList.add("show");
+      if(initCountSlider){
+        showSuscribe(1);
+      }
+      initCountSlider = false;
       break;
-    case 3:
+      case 3:
       moreArrow.style.display = "none";
       arrowNext.style.display = "block";
       changeAnimation(3);
@@ -636,4 +650,19 @@ function openDisqusR(n, state){
 
 function instructionsNone(){
   instructionMobile.style.display = "none";
+}
+
+
+
+function showSuscribe(c){
+  switch (c) {
+  case 1:
+    suscribe.style.display = "block";
+    setTimeout(function(){ suscribe.style.opacity = "1"; },500);
+  break;
+  case 2:
+  suscribe.style.opacity = "0";
+  setTimeout(function(){ suscribe.style.display = "none"; },500);
+  break;
+  }
 }

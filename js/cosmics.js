@@ -20,7 +20,7 @@ swipeEl = _('swipeEl'),
 percentage = _('percentage'),
 arrowLeftDesk = _('arrowLeftDesk'),
 arrowRightDesk = _('arrowRightDesk'),
-suscribe = _('suscribe'),
+suscribe = _('suscribeW'),
 playBMobVimeo = _('playBMobVimeo'),
 titCos = _('titCos'),
 menuBo = _('menuBo'),
@@ -53,6 +53,9 @@ footerDom.style.opacity = "1";
 if(checkMobileIndex){
   window.onload = function(){
     instructionMobile.style.display = "block";
+    setTimeout(function(){
+      instructionMobile.style.opacity = "1";
+    },500);
     //Mobile disqus wrap
     for (var i = 0; i < disqus.length; i++) {
       disqus[i].classList.remove('hideDisqus');
@@ -184,8 +187,18 @@ document.onkeydown = function(evt) {
   }
 };
 
+var countInitSuscribe = true;
 var iframeDom = document.createElement('IFRAME');
 function sliderCosmic(b, i){
+  //count subscribe
+  if(countInitSuscribe){
+    countSuscribe++;
+    if(countSuscribe === 4){
+      showSuscribe(1);
+      countSuscribe = 0;
+      countInitSuscribe = false;
+    }
+  }
   for (var x = 0; x < shareFbCos.length; x++) {
     shareFbCos[x].style.display = "none"
   }
@@ -197,15 +210,10 @@ function sliderCosmic(b, i){
   }
   changeNumCos.innerHTML = num;
   if(b === true){
-      countSuscribe++;
-      if(countSuscribe === 3){
-        countSuscribe = 0;
-        showSuscribe(1);
-      }
     shareFbCos[i].style.display = "block";
     titCos.innerHTML = infoCos.e[i].tit;
     textCosmic.innerHTML = infoCos.e[i].info;
-    btnExercises.setAttribute('href', infoCos.e[i].exercises);
+    // btnExercises.setAttribute('href', infoCos.e[i].exercises);
     btnDisqus.setAttribute('onclick', infoCos.e[i].disqus);
     videoUrl = infoCos.e[i].url;
     if(checkMobileIndex){
@@ -218,7 +226,7 @@ function sliderCosmic(b, i){
     shareFbCos[i].style.display = "block";
     titCos.innerHTML = infoCos.e[i].tit;
     textCosmic.innerHTML = infoCos.e[i].info;
-    btnExercises.setAttribute('href', infoCos.e[i].exercises);
+    // btnExercises.setAttribute('href', infoCos.e[i].exercises);
     btnDisqus.setAttribute('onclick', infoCos.e[i].disqus);
     videoUrl = infoCos.e[i].url;
     if(checkMobileIndex){
@@ -665,6 +673,12 @@ function changeIcon(c, e){
   break;
   case 'out':
     e.setAttribute('src', 'img/icons/facebookE.svg');
+  break;
+  case 'overT':
+    e.setAttribute('src', 'img/icons/twitterE_hover.svg');
+  break;
+  case 'outT':
+    e.setAttribute('src', 'img/icons/twitterE.svg');
   break;
   }
 }

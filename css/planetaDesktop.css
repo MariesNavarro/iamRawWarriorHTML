@@ -66,7 +66,7 @@ p {
   top: 80px;
   left: 5vw;
   width: 90vw;
-
+  height: 500%;
 }
 .commentsDisqus>h3{
   position: absolute;
@@ -334,6 +334,8 @@ display: none;
   line-height: 25px;
 }
 #sharePost>ul{
+  margin-left: -50%;
+  width: 60vw;
   margin-top: 5%;
   display: -webkit-box;
 	display: -ms-flexbox;
@@ -540,4 +542,92 @@ display: none;
 }
 #instructionMobile>ul>li>a, #instructionMobile>ul>li>p{
   color: #0e2635;
+}
+
+
+#suscribeW{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9900;
+  opacity: 0;
+  display: none;
+
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -ms-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+#suscribeExit{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0);
+}
+#suscribe{
+  position: fixed;
+  top: calc(50% - 150px);
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 350px;
+  background: #f6eed9;
+  opacity: 1;
+  display: block;
+}
+#suscribe>a{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+#suscribe>h3{
+  margin-top: 35px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 25px;
+  font-size: 1.4rem;
+}
+#suscribe>p{
+  width: 80%;
+  margin-left: 10%;
+}
+#suscribe>form{
+  color: #0e2635;
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  top: calc(60% - 75px);
+  left: calc(50% - 200px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content:space-between;
+  align-items: center;
+}
+#suscribeBtn, #fieldName, #fieldEmail{
+  font-family: 'Garamond', sans-serif;
+  padding: 5px 8px;
+  font-size: 14px;
+  color: #0e2635;
+  background: none;
+  border: 1px solid #0e2635;
+  cursor: pointer;
+}
+#suscribeBtn:hover{
+  background: #0e2635;
+  color: #f6eed9;
+}
+#mailingW{
+  margin-top: 10px;
+  display: block;
+  width: 98%;
+  text-align: center;
 }

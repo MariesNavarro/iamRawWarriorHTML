@@ -53,6 +53,13 @@ fluo.com.mx
     <link rel="stylesheet" href="css/master.css"/>
   </head>
   <body>
+    <!-- Block Rotation -->
+    <div id="blockLandscapeAndroid" class="hideBlockLand">
+      <div>
+        <p>Please change of orientation to see the page</p>
+        <img src="img/icons/norotation.svg" alt="Icon No Ratation Allow" width="35">
+      </div>
+    </div>
     <p id="size"></p>
     <div id="loading">
       <p id="percentage">1%</p>
@@ -81,7 +88,7 @@ fluo.com.mx
       </div>
       <div id="subInner">
         <ul>
-          <li><a href="https://wearerawwarriors.com" target="_blank">We Are<span></span> </a></li>
+          <li><a href="https://wearerawwarriors.com" target="_blank">We Are Raw<span></span> </a></li>
           <li><a href="https://teachable.com" target="_blank">Teachable <span></span> </a></li>
           <li><a href="http://www.creativevisions.org" target="_blank">Creative visions <span></span> </a></li>
           <li><a href="http://www.rock-your-world.org" target="_blank">Rock your world <span></span> </a></li>
@@ -114,28 +121,34 @@ fluo.com.mx
         </div>
         <div id="intro">
           <h1>Raw Warrior</h1>
-          <h2 id="tituloIntro" class="animationIntro">7 lectures completed</h2>
+          <h2 id="tituloIntro" class="animationIntro">7 element completed</h2>
           <p id="textIntro" class="animationIntro">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
             sed diam nonummy nibh euismod tincidunt ut laoreet dolore
             magna aliquam erat volutpat.
           </p>
           <div>
-            <a class="triggerBtn" href="cosmics.html?cosmic=0" role="button" onmouseover="hoverButton(9)" onmouseout="hoverButton(10)">
-              <svg class="svgView" viewBox="0 0 204 83">
+            <span class="triggerBtn "></span>
+            <span class="triggerBtn "></span>
+            <svg class="svgView"></svg>
+            <svg class="svgView"></svg>
+            <path class="frameBorder"></path>
+            <path class="frameBorder"></path>
+            <a href="cosmics.html?cosmic=0" role="button" onmouseover="hoverButton(9)" onmouseout="hoverButton(10)">
+              <!-- <svg class="svgView" viewBox="0 0 204 83">
 	              <path class="frameBorder" fill="none" stroke="#F9F1DD" stroke-width="2" stroke-miterlimit="10"  d="M2,3.1h200.9V76H2V3.1z"/>
               </svg>
               <span id="introBtnA" class="animationIntro">
-                <img id="imgBtnA" src="img/icons/want.svg" alt="Button for englsih section">
-              </span>
+                <img id="imgBtnA" src="img/icons/want.svg" alt="Button more content">
+              </span> -->
             </a>
-            <a class="triggerBtn" role="button" onclick="showSuscribe(1)" onmouseover="hoverButton(11)" onmouseout="hoverButton(12)">
-              <svg class="svgView" viewBox="0 0 204 83">
+            <a role="button" onclick="showSuscribe(1)" onmouseover="hoverButton(11)" onmouseout="hoverButton(12)">
+              <!-- <svg class="svgView" viewBox="0 0 204 83">
                 <path class="frameBorder" fill="none" stroke="#F9F1DD" stroke-width="2" stroke-miterlimit="10"  d="M2,3.1h200.9V76H2V3.1z"/>
               </svg>
               <span id="introBtnB" class="animationIntro">
                 <img id="imgBtnB" src="img/icons/suscribe.svg" alt="Button for spanish section">
-              </span>
+              </span> -->
             </a>
           </div>
         </div>
@@ -162,6 +175,7 @@ fluo.com.mx
           elementDom = __('elementDom'),
           backToInner = _('backToInner'),
           menuBtn = _('menuBtn'),
+          blockLandscapeAndroid = _('blockLandscapeAndroid'),
           overFooterBtn = _('overFooterBtn'),
           overFooterImg = _('overFooterImg'),
           closeMenuMobile = _('closeMenuMobile'),
@@ -185,11 +199,23 @@ fluo.com.mx
         }
       }
 
+      window.addEventListener("orientationchange", function() {
+        if(window.orientation == 90 || window.orientation == -90){
+          blockLandscapeAndroid.classList.remove('hideBlockLand');
+          blockLandscapeAndroid.classList.add('showBlockLand');
+        } else {
+          blockLandscapeAndroid.classList.remove('showBlockLand');
+          blockLandscapeAndroid.classList.add('hideBlockLand');
+        }
+      });
+
+
       if(checkMobileIndex){
         diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
         backToInner.setAttribute('onclick', 'diveDeepFun(2)');
         setInnerMenuMobile();
         setFooterHoverMobile();
+
       } else {
         diveDeep.setAttribute('onclick', 'diveDeepFun(3)');
         backToInner.setAttribute('onclick', 'diveDeepFun(4)');
