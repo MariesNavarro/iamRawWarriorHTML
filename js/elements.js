@@ -2,8 +2,10 @@ var scriptDisqus = document.createElement('SCRIPT');
     scriptDisqus.id  = 'dsq-count-scr';
     scriptDisqus.defer = 'defer';
 
-    var objectDom = document.createElement('OBJECT');
-    objectDom.type = "text/html";
+var objectDom = document.createElement('OBJECT');
+objectDom.type = "text/html";
+
+
 
 var openFoot = false,
     initCountSlider = true;
@@ -48,17 +50,32 @@ var scrollFooterFix;
     var lastGif = 0;
     var swipeBullet = 0;
 
+// instructionMobile.style.display = "block";
+// setTimeout(function(){
+//   instructionMobile.style.opacity = "1";
+// },500);
+
+var pictureSwipe = _('pictureSwipe');
+var changePicture = true;
+swapPicture();
+function swapPicture(){
+  setInterval(function(){
+    changePicture = !changePicture;
+    if(changePicture){
+      pictureSwipe.setAttribute('src', 'img/icons/picture1.svg');
+    } else {
+      pictureSwipe.setAttribute('src', 'img/icons/picture.svg');
+    }
+  },1800);
+}
+
 var commentsDisqus = document.getElementsByClassName('commentsDisqus');
 window.onresize = function (){
 	document.getElementById("size").innerHTML = "W: " + window.innerWidth + "px | H: " + window.innerHeight + "px";
 }
     if(checkMobileIndex){
     window.onload = function(){
-      instructionMobile.style.display = "block";
-      setTimeout(function(){
-        instructionMobile.style.opacity = "1";
-      },500)
-      outer.style.top = "-30px";
+        outer.style.top = "-30px";
         setInnerMenuMobile();
         setFooterHoverMobile();
         diveDeep.setAttribute('onclick', 'diveDeepFun(1)');

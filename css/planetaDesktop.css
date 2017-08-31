@@ -498,12 +498,170 @@ display: none;
 
 #instructionMobile{
   position: fixed;
-  z-index: 10000;
+  z-index: 1000000;
   width: 100vw;
   height: 100vh;
   background: #f6eed9;
+  opacity: 1;
+  display: block;
 }
-#instructionMobile>ul{
+#instructionMobile>div{
+  display: block;
+  width: 80vw;
+  height: 70vh;
+  position: absolute;
+  left: 10vw;
+  top: 10vh;
+}
+#swipeEleMob{
+  position: relative;
+  width: 80vw;
+  height: 37%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#swipeEleMob>div{
+  width: 66px;
+  height: 90%;
+}
+#swipeEleMob>div>div{
+  position: relative;
+  width: 100%;
+  height: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#swipeEleMob>div>p{
+  position: absolute;
+  color: #0e2635;
+  width:60vw;
+  left: -16.5px;
+  text-align: center;
+}
+#swipeMob{
+  position:absolute;
+  height: 80%;
+  bottom: 0;
+  left: -5px;
+  /*left: 40px;*/
+
+  /*-webkit-animation: swipeBulletM 2s infinite;
+  -moz-animation: swipeBulletM 2s infinite;
+  -ms-animation: swipeBulletM 2s infinite;
+  -o-animation: swipeBulletM 2s infinite;*/
+  animation: swipeGifM 2s infinite;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+@keyframes swipeGifM {
+  0%{ left: -5px}
+  50%{ left: 40px}
+  100%{ left: -5px}
+}
+#orEleMob{
+  text-align: center;
+  width: 80vw;
+  height:20px;
+  color: #0e2635;
+}
+#touchEleMob{
+  width: 80vw;
+  height: 37%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#touchEleMob>ul{
+  display: block;
+  width: 200px;
+  height: 90%;
+  background: pink;
+  padding-left: 4vw;
+}
+#touchEleMob>ul>li{
+  display: inline-block;
+  width: 30%;
+  height: 33%;
+  background: red;
+  position: relative;
+}
+.bulletsWrapEl{
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction:row;
+  justify-content: space-around;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.bulletsWrapEl>span{
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #0e2635;
+  border-radius: 50%;
+}
+#touchElBullets{
+  position: absolute;
+  width: 55%;
+  left: 32%;
+}
+#gotitEleMob{
+  width: 80vw;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+#gotitEleMob>a{
+  border: 2px solid #0e2635;
+  padding: 15px 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #0e2635;
+}
+/*before*/
+/*#instructionMobile>ul{
   position: absolute;
   width: 80vw;
   height: 80vh;
@@ -542,7 +700,7 @@ display: none;
 }
 #instructionMobile>ul>li>a, #instructionMobile>ul>li>p{
   color: #0e2635;
-}
+}*/
 
 
 #suscribeW{

@@ -53,6 +53,71 @@ fluo.com.mx
   <link rel="stylesheet" href="css/master.css" media="all"/>
 </head>
 <body class="bodyBackDeg">
+  <div id="instructionMobile" style="display:block" >
+    <div>
+      <div id="swipeEleMob">
+        <div>
+          <div>
+            <img id="pictureSwipe" src="img/icons/picture.svg" alt="Icon gif">
+          </div>
+          <div>
+            <img id="swipeMob" src="img/icons/swipeCosmic.svg" alt="Icon swipe">
+          </div>
+          <p>Swipe over the image to change The Element</p>
+        </div>
+      </div>
+      <div id="orEleMob">
+        <p>OR</p>
+      </div>
+      <div id="touchEleMob">
+        <ul>
+          <li>
+            <div class="bulletsWrapEl">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </li> <!-- bullet -->
+          <li>
+            <div class="bulletsWrapEl">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </li> <!-- bullet -->
+          <li>
+            <div class="bulletsWrapEl">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </li> <!-- bullet -->
+          <li></li>
+          <li>
+            <img id="touchElBullets" src="img/icons/swipeCosmic.svg" alt="Icon swipe">
+          </li> <!-- icono -->
+          <li></li>
+        </ul>
+        <p>You can touch a bullet to select between The Elements</p>
+      </div>
+      <div id="gotitEleMob">
+        <a role="buton" onclick="instructionsNone()">Got it</a>
+      </div>
+    </div>
+    <!-- <ul>
+      <li>
+        <img src="img/icons/swipe.svg" alt="Instruction swipe" width="40">
+
+      </li>
+      <li>
+        <img src="img/icons/touch.svg" alt="Instruction touch" width="40">
+        <p>You can touch a bullet to select between elements</p>
+      </li>
+      <li>
+        <a role="buton" onclick="instructionsNone()">Got it</a>
+      </li>
+    </ul> -->
+  </div>
   <div id="suscribeW">
     <div id="suscribeExit" onclick="showSuscribe(2)"></div>
     <div id="suscribe">
@@ -80,22 +145,6 @@ fluo.com.mx
         </p>
       </form>
     </div>
-  </div>
-  <!-- style="display:none" -->
-  <div id="instructionMobile">
-    <ul>
-      <li>
-        <img src="img/icons/swipe.svg" alt="Instruction swipe" width="40">
-        <p>Swipe over the image to change the element</p>
-      </li>
-      <li>
-        <img src="img/icons/touch.svg" alt="Instruction touch" width="40">
-        <p>You can touch a bullet to select between elements</p>
-      </li>
-      <li>
-        <a role="buton" onclick="instructionsNone()">Got it</a>
-      </li>
-    </ul>
   </div>
   <p id="size"></p>
   <div id="sizeHome" style="z-index:-1000"></div>
