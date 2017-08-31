@@ -52,6 +52,10 @@ footerDom.style.opacity = "1";
 
 if(checkMobileIndex){
   window.onload = function(){
+    //Quitar onclick bullets en movil
+    for (var i = 0; i < bulletCosmic.length; i++) {
+      bulletCosmic[i].setAttribute('onclick', ' ');
+    }
     instructionMobile.style.display = "block";
     setTimeout(function(){
       instructionMobile.style.opacity = "1";
