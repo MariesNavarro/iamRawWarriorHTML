@@ -466,6 +466,20 @@ footer>#inner{
   font-size: 18px;
   margin-bottom: 20px;
 }
+#blockLandscapeAndroid>div>div{
+  margin: 0 auto;
+  width: 35px;
+}
+#blockLandscapeAndroid>div>div>img{
+  position: absolute;
+}
+#arrowRot{
+  -webkit-animation: spin 5s linear infinite;
+  -moz-animation: spin 5s linear infinite;
+  -ms-animation: spin 5s linear infinite;
+  -o-animation: spin 5s linear infinite;
+  animation: spin 5s linear infinite;
+}
 /*  Redes Temporales  */
 #textIntro{
   margin-top: 100px !important;

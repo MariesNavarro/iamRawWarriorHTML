@@ -177,9 +177,9 @@ h1, h2, h3, h4{
 }
 #suscribe{
   position: fixed;
-  top: calc(50% - 150px);
-  left: calc(50% - 200px);
-  width: 400px;
+  top: calc(50% - 200px);
+  left: calc(50% - 150px);
+  width: 300px;
   height: 350px;
   background: #f6eed9;
   opacity: 1;
@@ -245,4 +245,46 @@ h1, h2, h3, h4{
   left: calc(50% - 200px);
   top: 130px;
   margin-top: 100px;
+}
+
+@media screen and (min-height:792px) {
+  #textIntro{
+      position: absolute !important;
+      left: calc(50% - 200px);
+      top: -50px;;
+  }
+}
+
+
+#blockHeight{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fcf8e3;
+  z-index: 9000;
+}
+.blockHeightShow{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction:column;
+  justify-content: center;
+  -webkit-justify-content:center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.blockHeightHide{
+  display: none;
+}
+#blockHeight>div{
+  text-align: center;
+  width: 300px;
+}
+#blockHeight>div>p{
+  color: #0e2635;
+  margin-bottom: 20px;
 }

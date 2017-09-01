@@ -51,10 +51,11 @@ nav> #inner>ul>li>a, #menuBtn{
 #closeMenuMobile{
   display: block;
   position: absolute;
-  top: 5%;
+  top: 10%;
   right: 10%;
   width: 20px;
   height: 20px;
+  z-index: 9000;
 }
 
 footer>#outer>a{

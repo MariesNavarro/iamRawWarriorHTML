@@ -2,7 +2,7 @@ var linkDomHomeMobile = document.createElement('LINK');
 linkDomHomeMobile.rel  = 'stylesheet';
 linkDomHomeMobile.type = 'text/css';
 linkDomHomeMobile.href = "css/homeMobile.css";
-
+var rotationBlock = true;
 var openFoot = false;
 var footerDom = document.getElementsByTagName("FOOTER")[0],
     navDom = document.getElementsByTagName("NAV")[0],
@@ -93,6 +93,7 @@ if(checkMobileIndex){
   }
 } else{
   window.onload = function(){
+    instructionMobile.style.display = "none";
     swipeCosmic.style.display = "none";
     setInnerMenu();
     setFooterHover();
@@ -103,7 +104,18 @@ if(checkMobileIndex){
   }
 }
 
-
+window.addEventListener('orientationchange', onWindowOrientation, false);
+function onWindowOrientation(event){
+  if (rotationBlock) {
+    if(window.orientation == 90 || window.orientation == -90){
+  		blockLandscapeAndroid.classList.remove('hideBlockLand');
+  		blockLandscapeAndroid.classList.add('showBlockLand');
+  	} else {
+      blockLandscapeAndroid.classList.remove('showBlockLand');
+  		blockLandscapeAndroid.classList.add('hideBlockLand');
+    }
+  }
+}
 
 function diveDeepFun(c){
   switch (c) {
@@ -835,4 +847,5 @@ function frameLoad(){
 
 function instructionsNone(){
   instructionMobile.style.display = "none";
+  rotationBlock = false;
 }

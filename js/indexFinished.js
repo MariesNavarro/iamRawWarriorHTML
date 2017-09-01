@@ -26,6 +26,8 @@ for(var i =0; i< frameBorder.length; i++){
 }
 
 
+var blockHeight = _('blockHeight');
+
 if(checkMobileIndex){
   headDom.appendChild(linkDomMaster);
   setMobileButtons();
@@ -112,16 +114,16 @@ function hoverButton(state){
     imgBtnB.setAttribute('src', 'img/icons/espanol.svg');
   break;
   case 5:
-    imgBtnA.setAttribute('src', 'img/icons/english_mobile_h.svg');
+    imgBtnA.setAttribute('src', 'img/icons/more_mobile_h.svg');
   break;
   case 6:
-  imgBtnA.setAttribute('src', 'img/icons/english_mobile.svg');
+  imgBtnA.setAttribute('src', 'img/icons/more_mobile.svg');
   break;
   case 7:
-  imgBtnB.setAttribute('src', 'img/icons/espanol_mobile_h.svg');
+  imgBtnB.setAttribute('src', 'img/icons/subscribe_mobile_h.svg');
   break;
   case 8:
-  imgBtnB.setAttribute('src', 'img/icons/espanol_mobile.svg');
+  imgBtnB.setAttribute('src', 'img/icons/subscribe_mobile.svg');
   break;
 
   case 9:
@@ -147,8 +149,8 @@ function hoverSuscribe(c){
 }
 
 function setMobileButtons(){
-  imgBtnA.setAttribute('src', 'img/icons/english_mobile.svg');
-  imgBtnB.setAttribute('src', 'img/icons/espanol_mobile.svg');
+  imgBtnA.setAttribute('src', 'img/icons/more_mobile.svg');
+  imgBtnB.setAttribute('src', 'img/icons/subscribe_mobile.svg');
   for (var i = 0; i < svgView.length; i++) {
     svgView[i].setAttribute('viewBox', '0 0 119.4 78.6');
   }
@@ -228,6 +230,13 @@ function callTheElements(){}
 
 
 function onWindowResize(event){
+  if (window.innerHeight < 480) {
+    blockHeight.classList.remove('blockHeightHide');
+    blockHeight.classList.add('blockHeightShow');
+  } else {
+    blockHeight.classList.remove('blockHeightShow');
+    blockHeight.classList.add('blockHeightHide');
+  }
   var size = document.getElementById('size').innerHTML = "Width: " + innerWidth + " Height: " + innerHeight;
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;

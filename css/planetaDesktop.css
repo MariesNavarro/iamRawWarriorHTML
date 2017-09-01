@@ -498,7 +498,7 @@ display: none;
 
 #instructionMobile{
   position: fixed;
-  z-index: 1000000;
+  z-index: 10000;
   width: 100vw;
   height: 100vh;
   background: #f6eed9;
@@ -582,6 +582,7 @@ display: none;
   width: 80vw;
   height:20px;
   color: #0e2635;
+  margin-top: 15px;
 }
 #touchEleMob{
   width: 80vw;
@@ -615,7 +616,7 @@ display: none;
   color:#0e2635;
   display: block;
   position: absolute;
-  left: -4px;
+  left: -20px;
   text-align: center;
 }
 .bulletsWrapEl{
@@ -691,7 +692,7 @@ display: none;
 }
 #gotitEleMob{
   width: 80vw;
-  height: 35%;
+  height: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -779,9 +780,9 @@ display: none;
 }
 #suscribe{
   position: fixed;
-  top: calc(50% - 150px);
-  left: calc(50% - 200px);
-  width: 400px;
+  top: calc(50% - 200px);
+  left: calc(50% - 150px);
+  width: 300px;
   height: 350px;
   background: #f6eed9;
   opacity: 1;

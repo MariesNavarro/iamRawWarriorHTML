@@ -53,11 +53,21 @@ fluo.com.mx
     <link rel="stylesheet" href="css/master.css"/>
   </head>
   <body>
+    <!-- Block height -->
+    <div id="blockHeight" class="blockHeightHide">
+      <div>
+        <p>Please increase the height of your screen</p>
+        <img src="img/icons/resizeHeight.svg" alt="Icon Resize Height" height="60">
+      </div>
+    </div>
     <!-- Block Rotation -->
     <div id="blockLandscapeAndroid" class="hideBlockLand">
       <div>
         <p>Please change of orientation to see the page</p>
-        <img src="img/icons/norotation.svg" alt="Icon No Ratation Allow" width="35">
+        <div>
+          <img src="img/icons/norotation_lock.svg" alt="Icon No Ratation Allow" width="35">
+          <img id="arrowRot" src="img/icons/norotation_arrow.svg" alt="Icon No Ratation Allow" width="35">
+        </div>
       </div>
     </div>
     <p id="size"></p>
@@ -131,8 +141,8 @@ fluo.com.mx
         </div>
         <div id="intro">
           <h1>Raw Warrior</h1>
-          <h2 id="tituloIntro" class="animationIntro">7 element completed</h2>
-          <p id="textIntro" class="animationIntro">
+          <h2 id="tituloIntro" class="animationIntro">7 elements completed</h2>
+          <p id="textIntro" class="animationIntro fixTexto">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
             sed diam nonummy nibh euismod tincidunt ut laoreet dolore
             magna aliquam erat volutpat.
@@ -191,8 +201,8 @@ fluo.com.mx
         ss.push(s);
       }
       ss[0].setAttribute('src', 'js/build/shaders.js');
-      ss[1].setAttribute('src', 'js/mainFinished.js');
       ss[2].setAttribute('src', 'js/indexFinished.js');
+      ss[1].setAttribute('src', 'js/mainFinished.js');
 
       window.console.log("%cCoded by Mn - http://fluo.com.mx", "color:pink;  font-size: 10px; background:#000; padding:2px;");
       function _(el){return document.getElementById(el); }

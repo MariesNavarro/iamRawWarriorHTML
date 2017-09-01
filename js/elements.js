@@ -6,7 +6,7 @@ var objectDom = document.createElement('OBJECT');
 objectDom.type = "text/html";
 
 
-
+var rotationBlock = true;
 var openFoot = false,
     initCountSlider = true;
 var footerDom = document.getElementsByTagName("FOOTER")[0],
@@ -50,11 +50,6 @@ var scrollFooterFix;
     var lastGif = 0;
     var swipeBullet = 0;
 
-// instructionMobile.style.display = "block";
-// setTimeout(function(){
-//   instructionMobile.style.opacity = "1";
-// },500);
-
 var pictureSwipe = _('pictureSwipe');
 var changePicture = true;
 swapPicture();
@@ -69,20 +64,42 @@ function swapPicture(){
   },1800);
 }
 
+window.addEventListener('orientationchange', onWindowOrientation, false);
+function onWindowOrientation(event){
+  if (rotationBlock) {
+    if(window.orientation == 90 || window.orientation == -90){
+  		blockLandscapeAndroid.classList.remove('hideBlockLand');
+  		blockLandscapeAndroid.classList.add('showBlockLand');
+  	} else {
+      blockLandscapeAndroid.classList.remove('showBlockLand');
+  		blockLandscapeAndroid.classList.add('hideBlockLand');
+    }
+  }
+}
+
+
 var commentsDisqus = document.getElementsByClassName('commentsDisqus');
 window.onresize = function (){
 	document.getElementById("size").innerHTML = "W: " + window.innerWidth + "px | H: " + window.innerHeight + "px";
 }
     if(checkMobileIndex){
     window.onload = function(){
+      instructionMobile.style.display = "block";
+      setTimeout(function(){
+        instructionMobile.style.opacity = "1";
+      },500);
+      if (bowser.android) {
+        for (var i = 0; i < shareWrap.length; i++) {
+            shareWrap[i].style.marginLeft = "-80%";
+            shareWrap[i].style.width = " 80vw";
+        }
+      }
         outer.style.top = "-30px";
         setInnerMenuMobile();
         setFooterHoverMobile();
         diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
         backToInner.setAttribute('onclick', 'diveDeepFun(2)');
         window.addEventListener("scroll", changeColorDesktop, false);
-
-
         sequencesDesktop();
         detectswipe('eW', swipeTransform);
         initInfoSlider();
@@ -117,6 +134,7 @@ window.onresize = function (){
     } else{
       console.log("Desktop elements");
       window.onload = function(){
+        instructionMobile.style.display = "none";
         window.addEventListener("scroll", changeColorDesktop, false);
         setInnerMenu();
         setFooterHover();
@@ -665,8 +683,11 @@ function openDisqusR(n, state){
 }
 
 
+
+
 function instructionsNone(){
   instructionMobile.style.display = "none";
+  rotationBlock = false
 }
 
 

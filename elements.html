@@ -53,7 +53,18 @@ fluo.com.mx
   <link rel="stylesheet" href="css/master.css" media="all"/>
 </head>
 <body class="bodyBackDeg">
-  <div id="instructionMobile" style="display:block" >
+  <!-- Block Rotation -->
+  <div id="blockLandscapeAndroid" class="hideBlockLand">
+    <div>
+      <p>Please change of orientation to see the page</p>
+      <div>
+        <img src="img/icons/norotation_lock.svg" alt="Icon No Ratation Allow" width="35">
+        <img id="arrowRot" src="img/icons/norotation_arrow.svg" alt="Icon No Ratation Allow" width="35">
+      </div>
+    </div>
+  </div>
+  <!-- Instrucciones -->
+  <div id="instructionMobile">
     <div>
       <div id="swipeEleMob">
         <div>
@@ -104,19 +115,6 @@ fluo.com.mx
         <a role="buton" onclick="instructionsNone()">Got it</a>
       </div>
     </div>
-    <!-- <ul>
-      <li>
-        <img src="img/icons/swipe.svg" alt="Instruction swipe" width="40">
-
-      </li>
-      <li>
-        <img src="img/icons/touch.svg" alt="Instruction touch" width="40">
-        <p>You can touch a bullet to select between elements</p>
-      </li>
-      <li>
-        <a role="buton" onclick="instructionsNone()">Got it</a>
-      </li>
-    </ul> -->
   </div>
   <div id="suscribeW">
     <div id="suscribeExit" onclick="showSuscribe(2)"></div>
