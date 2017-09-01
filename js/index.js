@@ -226,8 +226,17 @@ function callMesh(){}
 function renderMesh(){}
 function callTheElements(){}
 
+  var blockHeight = _('blockHeight');
 
 function onWindowResize(event){
+    if (window.innerHeight < 480) {
+      blockHeight.classList.remove('blockHeightHide');
+      blockHeight.classList.add('blockHeightShow');
+    } else {
+      blockHeight.classList.remove('blockHeightShow');
+      blockHeight.classList.add('blockHeightHide');
+    }
+
   var size = document.getElementById('size').innerHTML = "Width: " + innerWidth + " Height: " + innerHeight;
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
