@@ -152,15 +152,12 @@ h1, h2, h3, h4{
   color: #f6eed9;
 }
 
-#suscribe{
+#suscribeW{
   position: fixed;
-  top: calc(50% - 150px);
-  left: calc(50% - 200px);
-  width: 400px;
-  height: 300px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
   z-index: 9900;
-  background: #f6eed9;
-
   opacity: 0;
   display: none;
 
@@ -170,18 +167,48 @@ h1, h2, h3, h4{
   -o-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
 }
+#suscribeExit{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0);
+}
+#suscribe{
+  position: fixed;
+  top: calc(50% - 150px);
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 350px;
+  background: #f6eed9;
+  opacity: 1;
+  display: block;
+}
 #suscribe>a{
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 10px;
   cursor: pointer;
+}
+#suscribe>h3{
+  margin-top: 35px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 25px;
+  font-size: 1.4rem;
+}
+#suscribe>p{
+  width: 80%;
+  margin-left: 10%;
 }
 #suscribe>form{
   color: #0e2635;
   position: absolute;
   width: 400px;
   height: 150px;
-  top: calc(50% - 75px);
+  top: calc(60% - 75px);
   left: calc(50% - 200px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,4 +231,18 @@ h1, h2, h3, h4{
 #suscribeBtn:hover{
   background: #0e2635;
   color: #f6eed9;
+}
+#mailingW{
+  margin-top: 10px;
+  display: block;
+  width: 98%;
+  text-align: center;
+}
+
+
+#fixFinished{
+  position: absolute !important;
+  left: calc(50% - 200px);
+  top: 130px;
+  margin-top: 100px;
 }

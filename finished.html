@@ -61,7 +61,7 @@ fluo.com.mx
       </div>
     </div>
     <p id="size"></p>
-    <div id="loading">
+    <div id="loading" style="display:none">
       <p id="percentage">1%</p>
       <img src="img/logos/logo-rawwarrior-small.svg" title="Logo Raw Warrior" alt="Logo Raw Warrior for loading" width="110" height="110">
     </div>
@@ -96,23 +96,33 @@ fluo.com.mx
         </ul>
       </div>
     </nav>
-    <div id="suscribe">
-      <a role="button" onclick="showSuscribe(2)">
-        <img src="img/icons/menuClose_b.svg" alt="" width="25">
-      </a>
-      <form action="https://claudiaflores.createsend.com/t/j/s/zjyulj/" method="post" id="subForm">
-        <p>
-          <label for="fieldName">Name</label><br />
-          <input id="fieldName" name="cm-name" type="text" />
-        </p>
-        <p>
-          <label for="fieldEmail">Email</label><br />
-          <input id="fieldEmail" name="cm-zjyulj-zjyulj" type="email" required />
-        </p>
-        <p>
-          <button id="suscribeBtn" type="submit">Subscribe</button>
-        </p>
-      </form>
+    <div id="suscribeW">
+      <div id="suscribeExit" onclick="showSuscribe(2)"></div>
+      <div id="suscribe">
+        <a role="button" onclick="showSuscribe(2)">
+          <img src="img/icons/menuClose_b.svg" alt="" width="25">
+        </a>
+        <h3 style="color:#0e2635">Get our newsletter</h3>
+        <br>
+        <p style="color:#0e2635">
+          Want the latest of our content?
+          Simply add your name and mail below.
+          A confirmation email will be sent to you!
+      </p>
+        <form action="https://claudiaflores.createsend.com/t/j/s/zjyulj/" method="post" id="subForm">
+          <p>
+            <label for="fieldName">Name</label><br />
+            <input id="fieldName" name="cm-name" type="text" />
+          </p>
+          <p>
+            <label for="fieldEmail">Email</label><br />
+            <input id="fieldEmail" name="cm-zjyulj-zjyulj" type="email" required />
+          </p>
+          <p>
+            <button id="suscribeBtn" type="submit">Subscribe</button>
+          </p>
+        </form>
+      </div>
     </div>
     <div id="main">
       <div id="interface">
@@ -127,28 +137,22 @@ fluo.com.mx
             sed diam nonummy nibh euismod tincidunt ut laoreet dolore
             magna aliquam erat volutpat.
           </p>
-          <div>
-            <span class="triggerBtn "></span>
-            <span class="triggerBtn "></span>
-            <svg class="svgView"></svg>
-            <svg class="svgView"></svg>
-            <path class="frameBorder"></path>
-            <path class="frameBorder"></path>
-            <a href="cosmics.html?cosmic=0" role="button" onmouseover="hoverButton(9)" onmouseout="hoverButton(10)">
-              <!-- <svg class="svgView" viewBox="0 0 204 83">
+          <div id="fixFinished">
+            <a class="triggerBtn" href="cosmics.html?cosmic=0" role="button" onmouseover="hoverButton(9)" onmouseout="hoverButton(10)">
+              <svg class="svgView" viewBox="0 0 204 83">
 	              <path class="frameBorder" fill="none" stroke="#F9F1DD" stroke-width="2" stroke-miterlimit="10"  d="M2,3.1h200.9V76H2V3.1z"/>
               </svg>
               <span id="introBtnA" class="animationIntro">
                 <img id="imgBtnA" src="img/icons/want.svg" alt="Button more content">
-              </span> -->
+              </span>
             </a>
-            <a role="button" onclick="showSuscribe(1)" onmouseover="hoverButton(11)" onmouseout="hoverButton(12)">
-              <!-- <svg class="svgView" viewBox="0 0 204 83">
+            <a class="triggerBtn" role="button" onclick="showSuscribe(1)" onmouseover="hoverButton(11)" onmouseout="hoverButton(12)">
+              <svg class="svgView" viewBox="0 0 204 83">
                 <path class="frameBorder" fill="none" stroke="#F9F1DD" stroke-width="2" stroke-miterlimit="10"  d="M2,3.1h200.9V76H2V3.1z"/>
               </svg>
               <span id="introBtnB" class="animationIntro">
                 <img id="imgBtnB" src="img/icons/suscribe.svg" alt="Button for spanish section">
-              </span> -->
+              </span>
             </a>
           </div>
         </div>
@@ -175,6 +179,7 @@ fluo.com.mx
           elementDom = __('elementDom'),
           backToInner = _('backToInner'),
           menuBtn = _('menuBtn'),
+          suscribe = _('suscribeW'),
           blockLandscapeAndroid = _('blockLandscapeAndroid'),
           overFooterBtn = _('overFooterBtn'),
           overFooterImg = _('overFooterImg'),
@@ -211,6 +216,8 @@ fluo.com.mx
 
 
       if(checkMobileIndex){
+        navDom.style.display = "none";
+        footerDom.style.display = "none";
         diveDeep.setAttribute('onclick', 'diveDeepFun(1)');
         backToInner.setAttribute('onclick', 'diveDeepFun(2)');
         setInnerMenuMobile();
@@ -257,6 +264,10 @@ fluo.com.mx
       }
     }
 
+    function setInnerMenuMobile(){
+      menuBtn.setAttribute('onclick', 'overMobile(1)');
+      closeMenuMobile.setAttribute('onclick', 'overMobile(2)');
+    }
 
     function setFooterHover(){
       overFooterBtn.setAttribute('onmouseover', 'footerHover(1)');
@@ -315,18 +326,18 @@ fluo.com.mx
       }
     }
 
-      function showSuscribe(c){
-        switch (c) {
-        case 1:
-          suscribe.style.display = "block";
-          setTimeout(function(){ suscribe.style.opacity = "1"; },500);
-        break;
-        case 2:
-        suscribe.style.opacity = "0";
-        setTimeout(function(){ suscribe.style.display = "none"; },500);
-        break;
-        }
+    function showSuscribe(c){
+      switch (c) {
+      case 1:
+        suscribe.style.display = "block";
+        setTimeout(function(){ suscribe.style.opacity = "1"; },500);
+      break;
+      case 2:
+      suscribe.style.opacity = "0";
+      setTimeout(function(){ suscribe.style.display = "none"; },500);
+      break;
       }
+    }
 
       function diveDeepFun(c){
         switch (c) {
